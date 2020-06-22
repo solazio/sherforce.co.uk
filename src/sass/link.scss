@@ -1,0 +1,32 @@
+@mixin link {
+  a.p-link {
+    color: $color-dark;
+    text-decoration: none;
+    padding-bottom: 2px;
+    position: relative;
+
+    &::before {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background-color: $color-secondary;
+      content: "";
+      opacity: 0.5;
+      transform: scaleX(0.9);
+      transition-property: transform, opacity;
+      transition-duration: 0.3s;
+    }
+    &:hover {
+      &::before {
+        transform: scaleX(1);
+        opacity: 1;
+      }
+    }
+
+    &.is-dark {
+      color: $color-light;
+    }
+  }
+}

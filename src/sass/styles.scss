@@ -1,0 +1,45 @@
+// Import the framework
+@import "node_modules/vanilla-framework/scss/vanilla";
+
+// Include vanilla patterns
+@include vf-base;
+@include vf-p-grid;
+@include vf-p-icons;
+@include vf-u-layout;
+@include vf-u-hide;
+
+// color variables
+$color-primary: #1555a8;
+$color-secondary: #ff5964;
+$color-accent: #23ce6b;
+$color-background: #fff; // dark #1c1c1c
+$color-light: #f7f7f7;
+
+// https://fonts.google.com/specimen/Poppins
+@import url("https://fonts.googleapis.com/css?family=Poppins:300,500");
+
+html {
+  font-family: "Poppins", Helvetica, sans-serif;
+  // font-family:  Helvetica, sans-serif;
+}
+
+@import "footer";
+@include footer;
+
+@import "link";
+@include link;
+
+@import "table";
+@include table;
+
+@import "navigation";
+@include navigation;
+
+.p-icon--close {
+  background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='%23e5e5e5' fill-rule='nonzero' d='M8.75 1.151V7.25l6.099.001v1.5h-6.1l.001 6.099h-1.5v-6.1L1.15 8.75v-1.5H7.25L7.25 1.15z'/%3E%3C/svg%3E");
+  transform: rotate(45deg);
+}
+
+.p-icon--menu {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16'%3E%3Cg fill='%23e5e5e5' fill-rule='nonzero'%3E%3Cpath d='M0 2.7h16v2.462H0zM0 6.751h16v2.462H0zM0 10.802h16v2.462H0z'/%3E%3C/g%3E%3C/svg%3E");
+}
