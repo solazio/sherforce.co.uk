@@ -7,15 +7,15 @@ import Table from "../components/Table";
 
 export const IndexPageTemplate = () => (
   <div>
-    <section className='uk-container'>
-      <div className='u-fixed-width'>
+    <section className='section'>
+      <div className='container'>
         <Link to='/contact' className='p-button--neutral'>
           Join Now
         </Link>
       </div>
     </section>
-    <section className='uk-container'>
-      <div className='row'>
+    <section className='section'>
+      <div className='container'>
         <Table />
       </div>
     </section>

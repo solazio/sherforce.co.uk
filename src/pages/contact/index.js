@@ -36,10 +36,10 @@ export default class Index extends React.Component {
   render() {
     return (
       <Layout>
-        <section className='p-strip is-shallow'>
-          <div className='row'>
-            <div className='col-6 col-start-large-4'>
-              <h1 className='p-heading--2'>Get in touch</h1>
+        <section className='section'>
+          <div className='columns'>
+            <div className='content column is-half is-offset-one-quarter'>
+              <h1>Get in touch</h1>
               <form
                 name='contact'
                 method='post'
@@ -47,11 +47,7 @@ export default class Index extends React.Component {
                 data-netlify='true'
                 data-netlify-honeypot='bot-field'
                 onSubmit={this.handleSubmit}>
-                <p className='required-legend u-align-text--right'>Required</p>
                 {/* The `form-name` hidden field is required to support form submissions without JavaScript */}
-                <label className='u-hide' htmlFor={"form-name"}>
-                  Not real
-                </label>
                 <input type='hidden' name='form-name' value='contact' />
                 <div hidden>
                   <label>
@@ -59,55 +55,59 @@ export default class Index extends React.Component {
                     <input name='bot-field' onChange={this.handleChange} />
                   </label>
                 </div>
-                <label className='is-required' htmlFor={"name"}>
-                  Name
-                </label>
-                <input
-                  className='input'
-                  type={"text"}
-                  name={"name"}
-                  onChange={this.handleChange}
-                  id={"name"}
-                  required={true}
-                  placeholder={"John Smith"}
-                />
-                <label className='is-required' htmlFor={"email"}>
-                  Email
-                </label>
-                <input
-                  className='input'
-                  type={"email"}
-                  name={"email"}
-                  onChange={this.handleChange}
-                  id={"email"}
-                  required={true}
-                  placeholder={"example@email.com"}
-                />
-                <label htmlFor={"mobile"}>Mobile</label>
-                <input
-                  className='input'
-                  type={"tel"}
-                  name={"mobile"}
-                  onChange={this.handleChange}
-                  id={"mobile"}
-                  required={false}
-                  placeholder={"+44 1232 324 342"}
-                />
-                <label className='is-required' htmlFor={"message"}>
-                  Message
-                </label>
-                <textarea
-                  className='textarea'
-                  name={"message"}
-                  onChange={this.handleChange}
-                  id={"message"}
-                  required={true}
-                  placeholder={"Your message..."}
-                  style={{ resize: "vertical" }}
-                />
-                <button className='p-button--neutral' type='submit'>
-                  Send
-                </button>
+                <div className='field'>
+                  <label className='label' htmlFor={"name"}>
+                    Your name
+                  </label>
+                  <div className='control'>
+                    <input
+                      className='input'
+                      type={"text"}
+                      name={"name"}
+                      onChange={this.handleChange}
+                      id={"name"}
+                      required={true}
+                    />
+                  </div>
+                </div>
+                <div className='field'>
+                  <label className='label' htmlFor={"email"}>
+                    Email
+                  </label>
+                  <div className='control'>
+                    <input
+                      className='input'
+                      type={"email"}
+                      name={"email"}
+                      onChange={this.handleChange}
+                      id={"email"}
+                      required={true}
+                    />
+                  </div>
+                </div>
+                <div className='field'>
+                  <label className='label' htmlFor={"message"}>
+                    Message
+                  </label>
+                  <div className='control'>
+                    <textarea
+                      className='textarea'
+                      name={"message"}
+                      onChange={this.handleChange}
+                      id={"message"}
+                      required={true}
+                    />
+                  </div>
+                </div>
+                <div className='columns'>
+                  <div className='column is-4 field'>
+                    <button
+                      className='button is-link is-outlined is-fullwidth'
+                      type='submit'>
+                      Send
+                    </button>
+                  </div>
+                </div>
               </form>
             </div>
           </div>

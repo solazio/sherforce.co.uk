@@ -1,33 +1,40 @@
 @mixin table {
-  .p-table__container {
-    .p-table__title {
+  .table-container {
+    .table__title {
       display: flex;
-      font-weight: 700;
-      padding-left: $spv-inner--medium;
-      padding-bottom: $spv-inner--medium;
+      padding-left: 0.75rem;
+      padding-bottom: 0.75rem;
 
-      .p-table__title--image {
+      .table__title--image {
         display: flex;
         align-items: center;
       }
 
-      .p-table__title--text {
-        // color to match the FA logo color
-        color: #011e41;
+      .table__title--text {
+        font-weight: 700;
         margin-bottom: 6px;
-        margin-left: $spv-inner--medium;
+        margin-left: 1rem;
+
+        &:hover {
+          // color to match the FA logo color
+          color: #011e41;
+        }
       }
+    }
+
+    .table {
+      width: 100%;
     }
 
     table {
       thead {
-        background-color: $color-light;
+        background-color: $white-bis;
 
         tr {
           border-bottom: none;
 
           th {
-            font-weight: bold;
+            font-weight: 500;
 
             .large-screen {
               display: block;
@@ -37,7 +44,7 @@
               display: none;
             }
 
-            @media screen and(max-width: $breakpoint-medium) {
+            @media screen and(max-width: $tablet) {
               .large-screen {
                 display: none;
               }
@@ -56,30 +63,30 @@
 
       th,
       td {
-        padding: $spv-inner--large $spv-inner--medium;
+        padding: 1rem 0.75rem;
         vertical-align: middle;
         text-align: center;
 
-        @media screen and(max-width: $breakpoint-small) {
-          padding: $spv-inner--small 0;
+        @media screen and(max-width: 620px) {
+          padding: 0.5rem 0;
         }
       }
 
-      .p-table__club {
+      .table__club {
         text-align: left;
         width: 45%;
 
-        @media screen and(min-width: $breakpoint-small) and(max-width:$breakpoint-medium) {
+        @media screen and(min-width: 620px) and(max-width: $tablet) {
           width: 35%;
         }
 
-        @media screen and(max-width: $breakpoint-small) {
+        @media screen and(max-width: 620px) {
           width: 30%;
           white-space: nowrap;
           overflow: hidden;
           text-overflow: ellipsis;
-          padding-left: $spv-inner--x-small;
-          padding-right: $spv-inner--x-small;
+          padding-left: 0.25rem;
+          padding-right: 0.25rem;
         }
       }
 

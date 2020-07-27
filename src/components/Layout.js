@@ -2,8 +2,9 @@ import React from "react";
 import { Helmet } from "react-helmet";
 import { globalHistory } from "@reach/router";
 import Footer from "../components/Footer";
-import Header from "../components/Header";
+import Navbar from "../components/Header";
 import "../sass/styles.scss";
+// import "../sass/all.sass";
 import useSiteMetadata from "./SiteMetadata";
 
 const TemplateWrapper = ({ children }) => {
@@ -54,7 +55,7 @@ const TemplateWrapper = ({ children }) => {
 
         <meta property='fb:app_id' content='add_fb_app_id' />
       </Helmet>
-      <Header path={globalHistory.location.pathname} />
+      <Navbar path={globalHistory.location.pathname} />
       <div>{children}</div>
       <Footer />
     </div>

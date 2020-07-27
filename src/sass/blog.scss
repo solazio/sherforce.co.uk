@@ -1,0 +1,15 @@
+@mixin blog {
+  .blog-list {
+    .card {
+      border-radius: 0.25rem;
+      overflow: hidden;
+    }
+    .is-featured {
+      background-color: lighten($color-secondary, 28%);
+    }
+
+    .image {
+      margin: 0;
+    }
+  }
+}
