@@ -1,19 +1,36 @@
+// 1. Your custom variables and variable overwrites.
+// $global-link-color: #DA7D02;
+
+// 2. Import default variables and available mixins.
+@import "node_modules/uikit/src/scss/variables-theme.scss";
+@import "node_modules/uikit/src/scss/mixins-theme.scss";
+
+// 3. Your custom mixin overwrites.
+@mixin hook-card() { color: #000; }
+
+// 4. Import UIkit.
+@import "node_modules/uikit/src/scss/uikit-theme.scss";
 // Import the framework
-@import "node_modules/vanilla-framework/scss/vanilla";
+// @import "node_modules/vanilla-framework/scss/vanilla";
 
 // Include vanilla patterns
-@include vf-base;
-@include vf-p-grid;
-@include vf-p-icons;
-@include vf-u-layout;
-@include vf-u-hide;
+// @include vf-base;
+// @include vf-p-grid;
+// @include vf-p-strip;
+// @include vf-p-icons;
+// @include vf-p-headings;
+// @include vf-u-layout;
+// @include vf-u-hide;
+// @include vf-u-align;
+// @include vf-u-margin-collapse;
+// @include vf-u-padding-collapse;
 
 // color variables
-$color-primary: #1555a8;
-$color-secondary: #ff5964;
-$color-accent: #23ce6b;
-$color-background: #fff; // dark #1c1c1c
-$color-light: #f7f7f7;
+// $color-primary: #1555a8;
+// $color-secondary: #ff5964;
+// $color-accent: #23ce6b;
+// $color-background: #fff; // dark #1c1c1c
+// $color-light: #f7f7f7;
 
 // https://fonts.google.com/specimen/Poppins
 @import url("https://fonts.googleapis.com/css?family=Poppins:300,500");
@@ -23,17 +40,23 @@ html {
   // font-family:  Helvetica, sans-serif;
 }
 
-@import "footer";
-@include footer;
+// @import "button";
+// @include button;
 
-@import "link";
-@include link;
+// @import "card";
+// @include card;
 
-@import "table";
-@include table;
+// @import "footer";
+// @include footer;
 
-@import "navigation";
-@include navigation;
+// @import "link";
+// @include link;
+
+// @import "table";
+// @include table;
+
+// @import "navigation";
+// @include navigation;
 
 .p-icon--close {
   background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='%23e5e5e5' fill-rule='nonzero' d='M8.75 1.151V7.25l6.099.001v1.5h-6.1l.001 6.099h-1.5v-6.1L1.15 8.75v-1.5H7.25L7.25 1.15z'/%3E%3C/svg%3E");
@@ -42,4 +65,28 @@ html {
 
 .p-icon--menu {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16'%3E%3Cg fill='%23e5e5e5' fill-rule='nonzero'%3E%3Cpath d='M0 2.7h16v2.462H0zM0 6.751h16v2.462H0zM0 10.802h16v2.462H0z'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+.required-legend {
+  font-size: small;
+  margin-bottom: 0;
+  padding: 0;
+
+  &::before {
+    color: #c7162b;
+    content: "*";
+    position: relative;
+    right: 0.25rem;
+  }
+}
+
+label {
+  font-weight: 500;
+
+  &.is-required::after {
+    color: #c7162b;
+    content: "*";
+    left: 0.25rem;
+    position: relative;
+  }
 }

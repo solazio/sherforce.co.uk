@@ -44,17 +44,17 @@
         position: relative;
 
         &::before {
-            position: absolute;
-            bottom: 0.25rem;
-            width: 100%;
-            height: 2px;
-            background-color: $color-light;
-            content: "";
-            opacity: 0.25;
-            transform: scaleX(0.5);
-            transition-property: transform, opacity;
-            transition-duration: 0.3s;
-          }
+          position: absolute;
+          bottom: 0.25rem;
+          width: 100%;
+          height: 2px;
+          background-color: $color-light;
+          content: "";
+          opacity: 0.25;
+          transform: scaleX(0.5);
+          transition-property: transform, opacity;
+          transition-duration: 0.3s;
+        }
 
         &.is-selected,
         &:hover {
@@ -102,6 +102,8 @@
     }
 
     .p-navigation__logo {
+      text-transform: uppercase;
+      font-weight: 500;
       align-items: center;
       display: flex;
       flex: 0 0 auto;
