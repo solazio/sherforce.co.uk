@@ -4,7 +4,6 @@ import { globalHistory } from "@reach/router";
 import Footer from "../components/Footer";
 import Navbar from "../components/Header";
 import "../sass/styles.scss";
-// import "../sass/all.sass";
 import useSiteMetadata from "./SiteMetadata";
 
 const TemplateWrapper = ({ children }) => {

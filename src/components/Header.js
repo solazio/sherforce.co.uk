@@ -35,7 +35,10 @@ const Navbar = class extends React.Component {
   render() {
     const { path } = this.props;
     return (
-      <nav className='navbar is-transparent' role='navigation' aria-label='main-navigation'>
+      <nav
+        className='navbar is-transparent'
+        role='navigation'
+        aria-label='main-navigation'>
         <div className='container'>
           <div className='navbar-brand'>
             <Link to='/' className='navbar-item' title='Logo'>
@@ -64,6 +67,15 @@ const Navbar = class extends React.Component {
               </Link>
               <Link
                 className={
+                  path === "/players" || path === "/players/"
+                    ? "navbar-item is-selected"
+                    : "navbar-item"
+                }
+                to='/players'>
+                Players
+              </Link>
+              <Link
+                className={
                   path === "/news" || path === "/news/"
                     ? "navbar-item is-selected"
                     : "navbar-item"
@@ -73,12 +85,12 @@ const Navbar = class extends React.Component {
               </Link>
               <Link
                 className={
-                  path === "/about" || path === "/about/"
+                  path === "/history" || path === "/history/"
                     ? "navbar-item is-selected"
                     : "navbar-item"
                 }
-                to='/about'>
-                About
+                to='/history'>
+                History
               </Link>
               <Link
                 className={
@@ -106,3 +118,4 @@ Navbar.defaultProps = {
 };
 
 export default Navbar;
+

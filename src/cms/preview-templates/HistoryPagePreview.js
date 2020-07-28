@@ -1,19 +1,19 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { AboutPageTemplate } from '../../templates/about-page'
+import { HistoryPageTemplate } from '../../templates/history-page'
 
-const AboutPagePreview = ({ entry, widgetFor }) => (
-  <AboutPageTemplate
+const HistoryPagePreview = ({ entry, widgetFor }) => (
+  <HistoryPageTemplate
     title={entry.getIn(['data', 'title'])}
     content={widgetFor('body')}
   />
 )
 
-AboutPagePreview.propTypes = {
+HistoryPagePreview.propTypes = {
   entry: PropTypes.shape({
     getIn: PropTypes.func,
   }),
   widgetFor: PropTypes.func,
 }
 
-export default AboutPagePreview
+export default HistoryPagePreview

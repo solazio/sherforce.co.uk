@@ -124,3 +124,8 @@ This plugin uses [gatsby-plugin-purgecss](https://www.gatsbyjs.org/packages/gats
 
 Contributions are always welcome, no matter how large or small. Before contributing,
 please read the [code of conduct](CODE_OF_CONDUCT.md).
+
+
+## Useful
+https://www.otfc.org.uk/1st-xi-team/
+https://fulltime-league.thefa.com/js/cs1.do?cs=118456231&random=0.1704203609289056
