@@ -41,8 +41,9 @@ const Navbar = class extends React.Component {
         aria-label='main-navigation'>
         <div className='container'>
           <div className='navbar-brand'>
-            <Link to='/' className='navbar-item' title='Logo'>
-              <img src={logo} alt='Kaldi' style={{ width: "88px" }} />
+            <Link to='/' className='navbar-item is-uppercase' title='Logo'>
+              {/* <img src={logo} alt='Kaldi' style={{ width: "88px" }} /> */}
+              Sher Force FC
             </Link>
             {/* Hamburger menu */}
             <div

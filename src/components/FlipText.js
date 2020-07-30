@@ -2,7 +2,7 @@ import React from "react";
 
 const FlipText = () => {
   return (
-    <div className='flip-text__container is-size-2 mb-5'>
+    <div className='flip-text__container is-size-2 mb-5 mt-3'>
       <span>We</span>
       <div className='flip-text'>
         <ul className='flip4'>

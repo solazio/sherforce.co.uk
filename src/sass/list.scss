@@ -1,0 +1,11 @@
+@mixin list {
+  .divided-list {
+    .divided-list__item {
+      &:not(:last-child) {
+        border-bottom: 1px solid $grey-lighter;
+        padding-block-end: 0.25rem;
+        margin-block-end: 0.25rem;;
+      }
+    }
+  }
+}

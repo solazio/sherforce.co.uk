@@ -1,12 +1,51 @@
 @import "~bulma/sass/utilities/initial-variables";
 // Config vars
 $primary: #1555a8;
-$color-secondary: #ff5964;
 $primary-invert: #fff;
 $body-color: #333;
 $black: #2b2523;
 
+$color-secondary: #ff5964;
+$color-background: #f7f7f7;
+
 @import "~bulma";
+
+/// Replace `$search` with `$replace` in `$string`
+/// see: https://css-tricks.com/snippets/sass/str-replace-function/
+/// @author Hugo Giraudel
+/// @param {String} $string - Initial string
+/// @param {String} $search - Substring to replace
+/// @param {String} $replace ('') - New value
+/// @return {String} - Updated string
+@function str-replace($string, $search, $replace: "") {
+  $index: str-index($string, $search);
+
+  @if $index {
+    @return str-slice($string, 1, $index - 1) + $replace +
+      str-replace(
+        str-slice($string, $index + str-length($search)),
+        $search,
+        $replace
+      );
+  }
+
+  @return $string;
+}
+
+// This is to get the color variable inserted in an inline svg,
+// we have to strip the `#` and replace with %23 for #HEX notation, or
+// remove spaces and replace `,` with %2C for rgba() notation.
+@function vf-url-friendly-color($color) {
+  @if type-of($color) != "color" {
+    @warn '#{$color} is not a color.';
+    @return $color;
+  } @else {
+    @return str-replace(
+      str-replace(str-replace("#{$color}", "#", "%23"), ",", "%2C"),
+      " "
+    );
+  }
+}
 
 // Import the framework
 // @import "node_modules/vanilla-framework/scss/vanilla";
@@ -31,18 +70,18 @@ $black: #2b2523;
 // $color-light: #f7f7f7;
 
 // https://fonts.google.com/specimen/Poppins
-@import url("https://fonts.googleapis.com/css?family=Poppins:300,500");
+// @import url("https://fonts.googleapis.com/css?family=Poppins:300,500");
 
-html {
-  font-family: "Poppins", Helvetica, sans-serif;
-  // font-family:  Helvetica, sans-serif;
-}
+// html {
+//   font-family: "Poppins", Helvetica, sans-serif;
+//   // font-family:  Helvetica, sans-serif;
+// }
 
 // @import "button";
 // @include button;
 
-// @import "card";
-// @include card;
+@import "card";
+@include card;
 
 // @import "footer";
 // @include footer;
@@ -62,13 +101,15 @@ html {
 @import "navigation";
 @include navigation;
 
-.p-icon--close {
-  background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='%23e5e5e5' fill-rule='nonzero' d='M8.75 1.151V7.25l6.099.001v1.5h-6.1l.001 6.099h-1.5v-6.1L1.15 8.75v-1.5H7.25L7.25 1.15z'/%3E%3C/svg%3E");
-  transform: rotate(45deg);
-}
+@import "list";
+@include list;
 
-.p-icon--menu {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16'%3E%3Cg fill='%23e5e5e5' fill-rule='nonzero'%3E%3Cpath d='M0 2.7h16v2.462H0zM0 6.751h16v2.462H0zM0 10.802h16v2.462H0z'/%3E%3C/g%3E%3C/svg%3E");
+.main {
+  background-color: $color-background;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
 }
 
 .required-legend {
@@ -157,6 +198,76 @@ label {
       100% {
         margin-top: -18rem;
       }
+    }
+  }
+}
+
+p {
+  max-width: 40rem;
+}
+
+.is-slanted--left {
+  @media screen and (min-width: $tablet) {
+    clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 90%);
+  }
+}
+
+.is-slanted--right {
+  @media screen and (min-width: $tablet) {
+    clip-path: polygon(0 0, 100% 0%, 100% 90%, 0 100%);
+  }
+}
+
+.has-line {
+  @media screen and (min-width: $tablet) {
+    position: relative;
+
+    &::after {
+      content: "";
+      background-color: #f7f7f7;
+      position: absolute;
+      bottom: -0.75rem;
+      left: 0;
+      height: 1px;
+      width: 40rem;
+    }
+  }
+}
+
+.u-vertically-center {
+  align-items: center !important;
+  display: grid;
+  justify-content: flex-start;
+
+  > img {
+    align-self: center !important;
+  }
+}
+
+.has-text-centered--desktop {
+  @media screen and (min-width: $desktop) {
+    text-align: center;
+  }
+}
+
+.grid {
+  display: grid;
+  grid-template-rows: auto;
+  grid-column-start: auto;
+  width: 100%;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+
+  .col-4 {
+    grid-column-end: span 3;
+    @media (max-width: $widescreen) and (min-width: $tablet + 1px) {
+      grid-column-end: span 4;
+    }
+    @media (max-width: $tablet) and (min-width: 481px) {
+      grid-column-end: span 6;
+    }
+    @media (max-width: 480px) {
+      grid-column-end: span 12;
     }
   }
 }

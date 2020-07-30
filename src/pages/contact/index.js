@@ -36,79 +36,88 @@ export default class Index extends React.Component {
   render() {
     return (
       <Layout>
+        <section className='hero is-medium is-primary is-slanted--right'>
+          <div className='hero-body'>
+            <div className='container'>
+              <h1 className='title is-size-2 has-line'>Contact</h1>
+            </div>
+          </div>
+        </section>
         <section className='section'>
-          <div className='columns'>
-            <div className='content column is-half is-offset-one-quarter'>
-              <h1>Get in touch</h1>
-              <form
-                name='contact'
-                method='post'
-                action='/contact/thanks/'
-                data-netlify='true'
-                data-netlify-honeypot='bot-field'
-                onSubmit={this.handleSubmit}>
-                {/* The `form-name` hidden field is required to support form submissions without JavaScript */}
-                <input type='hidden' name='form-name' value='contact' />
-                <div hidden>
-                  <label>
-                    Don’t fill this out:{" "}
-                    <input name='bot-field' onChange={this.handleChange} />
-                  </label>
-                </div>
-                <div className='field'>
-                  <label className='label' htmlFor={"name"}>
-                    Your name
-                  </label>
-                  <div className='control'>
-                    <input
-                      className='input'
-                      type={"text"}
-                      name={"name"}
-                      onChange={this.handleChange}
-                      id={"name"}
-                      required={true}
-                    />
+          <div className='container'>
+            <div className='columns'>
+              <div className='content column is-half'>
+                <h2>Get in touch</h2>
+                <form
+                  name='contact'
+                  method='post'
+                  action='/contact/thanks/'
+                  data-netlify='true'
+                  data-netlify-honeypot='bot-field'
+                  onSubmit={this.handleSubmit}>
+                  {/* The `form-name` hidden field is required to support form submissions without JavaScript */}
+                  <input type='hidden' name='form-name' value='contact' />
+                  <div hidden>
+                    <label>
+                      Don’t fill this out:{" "}
+                      <input name='bot-field' onChange={this.handleChange} />
+                    </label>
                   </div>
-                </div>
-                <div className='field'>
-                  <label className='label' htmlFor={"email"}>
-                    Email
-                  </label>
-                  <div className='control'>
-                    <input
-                      className='input'
-                      type={"email"}
-                      name={"email"}
-                      onChange={this.handleChange}
-                      id={"email"}
-                      required={true}
-                    />
+                  <div className='field'>
+                    <label className='label' htmlFor={"name"}>
+                      Your name
+                    </label>
+                    <div className='control'>
+                      <input
+                        className='input'
+                        type={"text"}
+                        name={"name"}
+                        onChange={this.handleChange}
+                        id={"name"}
+                        required={true}
+                      />
+                    </div>
                   </div>
-                </div>
-                <div className='field'>
-                  <label className='label' htmlFor={"message"}>
-                    Message
-                  </label>
-                  <div className='control'>
-                    <textarea
-                      className='textarea'
-                      name={"message"}
-                      onChange={this.handleChange}
-                      id={"message"}
-                      required={true}
-                    />
+                  <div className='field'>
+                    <label className='label' htmlFor={"email"}>
+                      Email
+                    </label>
+                    <div className='control'>
+                      <input
+                        className='input'
+                        type={"email"}
+                        name={"email"}
+                        onChange={this.handleChange}
+                        id={"email"}
+                        required={true}
+                      />
+                    </div>
                   </div>
-                </div>
-                <div className='columns'>
-                  <div className='column is-4 field'>
-                    <button
-                      className='button is-link is-outlined is-fullwidth'
-                      type='submit'>
-                      Send
-                    </button>
+                  <div className='field'>
+                    <label className='label' htmlFor={"message"}>
+                      Message
+                    </label>
+                    <div className='control'>
+                      <textarea
+                        className='textarea'
+                        name={"message"}
+                        onChange={this.handleChange}
+                        id={"message"}
+                        required={true}
+                      />
+                    </div>
                   </div>
-                </div>
-              </form>
+                  <div className='columns'>
+                    <div className='column is-4 field'>
+                      <button
+                        className='button is-link is-outlined is-fullwidth'
+                        type='submit'>
+                        Send
+                      </button>
+                    </div>
+                  </div>
+                </form>
+              </div>
             </div>
           </div>
         </section>

@@ -6,32 +6,51 @@ import Layout from "../components/Layout";
 import Table from "../components/Table";
 import FlipText from "../components/FlipText";
 
-export const IndexPageTemplate = () => (
-  <div>
-    <section
-      className='section has-image has-text-light'
-      style={{
-        backgroundImage:
-          "linear-gradient(to top, rgba(94, 94, 94, 0.5) 0%, rgba(94, 94, 94, 0.5) 100%), url('/img/liverpool.png",
-        clipPath: "polygon(0 0, 100% 0%, 100% 100%, 0 90%)",
-      }}>
-      <div className='container'>
-        <h1 className='is-size-1 pt-6 mb-3'>Sher Force Football Club</h1>
-        <FlipText />
-        <p>
-          <Link to='/contact' className='button is-primary'>
-            Join us now
-          </Link>
-        </p>
-      </div>
-    </section>
-    <section className='section'>
-      <div className='container'>
-        <Table />
-      </div>
-    </section>
-  </div>
-);
+export const IndexPageTemplate = () => {
+  const fetchData = () => {
+    const tableData = fetch(
+      "https://fulltime-league.thefa.com/js/cs1.do?cs=118456231&random=0.1704203609289056",
+      {
+        method: "GET",
+        // mode: "no-cors",
+        headers: {
+          "sec-fetch-mode": "no-cors",
+          "sec-fetch-site": "cross-site",
+        },
+      }
+    )
+      .then((response) => response.json())
+      .then((res) => console.log(res))
+      .catch((err) => console.log(err));
+  };
+
+  return (
+    <div>
+      <section
+        className='section has-image has-text-light is-slanted--left'
+        style={{
+          backgroundImage:
+            "linear-gradient(to top, rgba(94, 94, 94, 0.5) 0%, rgba(94, 94, 94, 0.5) 100%), url('/img/liverpool.png",
+        }}>
+        <div className='container'>
+          <h1 className='is-size-1 pt-6'>Sher Force Football Club</h1>
+          <FlipText />
+          <p>
+            <Link to='/contact' className='button is-primary'>
+              Join us now
+            </Link>
+          </p>
+        </div>
+      </section>
+      <section className='section'>
+        <div className='container'>
+          <Table />
+          <button onClick={fetchData}>Click</button>
+        </div>
+      </section>
+    </div>
+  );
+};
 
 IndexPageTemplate.propTypes = {
   image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
