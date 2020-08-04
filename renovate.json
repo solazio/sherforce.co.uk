@@ -1,3 +1,13 @@
 {
-  "extends": ["github>netlify/renovate-config:netlify-cms-starter"]
+  "extends": [
+    "config:base",
+    "schedule:monthly",
+    "group:all"
+  ],
+  "packageRules": [
+    {
+      "depTypeList": ["devDependencies"],
+      "extends": [":automergeMinor"]
+    }
+  ]
 }
