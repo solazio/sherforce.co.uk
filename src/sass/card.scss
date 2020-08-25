@@ -1,26 +1,30 @@
 @mixin card {
-  .card-image-container {
-    position: relative;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: top;
-    height: 12.5rem;
+  .player-bio {
+    border-radius: 0.25rem;
+    overflow: hidden;
 
-    .info-position {
-      background: linear-gradient(
-        90deg,
-        rgba(241, 70, 104, 1) 0%,
-        transparent 175%
-      );
-      border-radius: 1rem 0 0 1rem;
-      text-align: center;
-      top: 50%;
-      color: $white-ter;
-      overflow: auto;
-      position: absolute;
-      right: 0;
-      padding: 0.5rem;
-      transform: translateY(-50%);
+    .card-image-container {
+      position: relative;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: top;
+
+      .card-image {
+        height: 12.5rem;
+      }
+
+      .info-position {
+        background: linear-gradient(90deg, #f14668 0%, transparent 200%);
+        border-radius: 1rem 0 0 1rem;
+        text-align: center;
+        top: 50%;
+        color: $white-ter;
+        overflow: auto;
+        position: absolute;
+        right: 0;
+        padding: 0.5rem;
+        transform: translateY(-50%);
+      }
     }
   }
 }

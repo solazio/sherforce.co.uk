@@ -1,6 +1,6 @@
 import React from "react";
 
-const Table = () => {
+const Table = ({ teams }) => {
   return (
     <div className='table-container'>
       <div className='table__title'>
@@ -55,106 +55,22 @@ const Table = () => {
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td>1</td>
-            <td className='table__club'>A C Milano</td>
-            <td>13</td>
-            <td>11</td>
-            <td>2</td>
-            <td>0</td>
-            <td>31</td>
-            <td>35</td>
-          </tr>
-          <tr>
-            <td>2</td>
-            <td className='table__club'>FC Leytonstone</td>
-            <td>14</td>
-            <td>9</td>
-            <td>1</td>
-            <td>4</td>
-            <td>9</td>
-            <td>28</td>
-          </tr>
-          <tr>
-            <td>3</td>
-            <td className='table__club'>Uplands Town</td>
-            <td>13</td>
-            <td>7</td>
-            <td>0</td>
-            <td>6</td>
-            <td>11</td>
-            <td>21</td>
-          </tr>
-          <tr>
-            <td>4</td>
-            <td className='table__club'>Sth Ilford Catholics</td>
-            <td>11</td>
-            <td>6</td>
-            <td>2</td>
-            <td>3</td>
-            <td>5</td>
-            <td>20</td>
-          </tr>
-          <tr>
-            <td>5</td>
-            <td className='table__club'>Wolfpack</td>
-            <td>12</td>
-            <td>6</td>
-            <td>2</td>
-            <td>4</td>
-            <td>1</td>
-            <td>20</td>
-          </tr>
-          <tr>
-            <td>6</td>
-            <td className='table__club'>Rainham WMC FC</td>
-            <td>15</td>
-            <td>5</td>
-            <td>0</td>
-            <td>10</td>
-            <td>-21</td>
-            <td>15</td>
-          </tr>
-          <tr>
-            <td>7</td>
-            <td className='table__club'>Eva Hart</td>
-            <td>12</td>
-            <td>3</td>
-            <td>4</td>
-            <td>5</td>
-            <td>-6</td>
-            <td>13</td>
-          </tr>
-          <tr>
-            <td>8</td>
-            <td className='table__club'>Loxford Lions</td>
-            <td>10</td>
-            <td>3</td>
-            <td>1</td>
-            <td>6</td>
-            <td>3</td>
-            <td>10</td>
-          </tr>
-          <tr>
-            <td>9</td>
-            <td className='table__club'>Hainault Athletic</td>
-            <td>10</td>
-            <td>3</td>
-            <td>0</td>
-            <td>7</td>
-            <td>-13</td>
-            <td>9</td>
-          </tr>
-          <tr className='p-table__highlighted'>
-            <td>10</td>
-            <td className='table__club'>Sher Force</td>
-            <td>12</td>
-            <td>2</td>
-            <td>0</td>
-            <td>10</td>
-            <td>-20</td>
-            <td>6</td>
-          </tr>
+          {teams.map((team, i) => (
+            <tr
+              key={team.name}
+              className={
+                team.name === "Sher Force" ? "p-table__highlighted" : ""
+              }>
+              <td>{i + 1}</td>
+              <td className='table__club'>{team.name}</td>
+              <td>{team.played}</td>
+              <td>11</td>
+              <td>2</td>
+              <td>0</td>
+              <td>31</td>
+              <td>35</td>
+            </tr>
+          ))}
         </tbody>
       </table>
     </div>

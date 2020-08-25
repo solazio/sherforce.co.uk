@@ -6,23 +6,23 @@ import Layout from "../components/Layout";
 import Table from "../components/Table";
 import FlipText from "../components/FlipText";
 
-export const IndexPageTemplate = () => {
-  const fetchData = () => {
-    const tableData = fetch(
-      "https://fulltime-league.thefa.com/js/cs1.do?cs=118456231&random=0.1704203609289056",
-      {
-        method: "GET",
-        // mode: "no-cors",
-        headers: {
-          "sec-fetch-mode": "no-cors",
-          "sec-fetch-site": "cross-site",
-        },
-      }
-    )
-      .then((response) => response.json())
-      .then((res) => console.log(res))
-      .catch((err) => console.log(err));
-  };
+export const IndexPageTemplate = ({ title, teams }) => {
+  // const fetchData = () => {
+  //   const tableData = fetch(
+  //     "https://fulltime-league.thefa.com/js/cs1.do?cs=118456231&random=0.1704203609289056",
+  //     {
+  //       method: "GET",
+  //       // mode: "no-cors",
+  //       headers: {
+  //         "sec-fetch-mode": "no-cors",
+  //         "sec-fetch-site": "cross-site",
+  //       },
+  //     }
+  //   )
+  //     .then((response) => response.json())
+  //     .then((res) => console.log(res))
+  //     .catch((err) => console.log(err));
+  // };
 
   return (
     <div>
@@ -33,7 +33,7 @@ export const IndexPageTemplate = () => {
             "linear-gradient(to top, rgba(94, 94, 94, 0.5) 0%, rgba(94, 94, 94, 0.5) 100%), url('/img/liverpool.png",
         }}>
         <div className='container'>
-          <h1 className='is-size-1 pt-6'>Sher Force Football Club</h1>
+          <h1 className='is-size-1 pt-6'>{title}</h1>
           <FlipText />
           <p>
             <Link to='/contact' className='button is-primary'>
@@ -44,8 +44,7 @@ export const IndexPageTemplate = () => {
       </section>
       <section className='section'>
         <div className='container'>
-          <Table />
-          <button onClick={fetchData}>Click</button>
+          <Table teams={teams} />
         </div>
       </section>
     </div>
@@ -62,6 +61,7 @@ IndexPageTemplate.propTypes = {
   intro: PropTypes.shape({
     blurbs: PropTypes.array,
   }),
+  teams: PropTypes.array,
 };
 
 const IndexPage = ({ data }) => {
@@ -77,6 +77,7 @@ const IndexPage = ({ data }) => {
         mainpitch={frontmatter.mainpitch}
         description={frontmatter.description}
         intro={frontmatter.intro}
+        teams={frontmatter.teams}
       />
     </Layout>
   );
@@ -103,6 +104,15 @@ export const pageQuery = graphql`
               ...GatsbyImageSharpFluid
             }
           }
+        }
+        teams {
+          name
+          points
+          played
+          won
+          drawn
+          lost
+          gd
         }
         heading
         subheading

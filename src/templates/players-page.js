@@ -46,13 +46,20 @@ export const aboutPageQuery = graphql`
       frontmatter {
         players {
           name
+          nickName
           country
           position
           age
           height
           weight
           foot
-          image
+          image {
+            childImageSharp {
+              fluid(maxWidth: 320, quality: 60) {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
           attributes {
             attacking
             defending

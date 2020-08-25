@@ -1,6 +1,77 @@
 ---
 templateKey: index-page
-title: Great coffee with a conscience
+title: Sher Force Football Club
+teams:
+  - name: A C Milano
+    points: 35
+    played: 1
+    won: 1
+    drawn: 1
+    lost: 1
+    gd: 10
+  - name: FC Leytonstone
+    points: 28
+    played: 1
+    won: 1
+    drawn: 1
+    lost: 1
+    gd: 10
+  - name: Uplands Town
+    points: 21
+    played: 1
+    won: 1
+    drawn: 1
+    lost: 1
+    gd: 10
+  - name: Sth Ilford Catholics
+    points: 20
+    played: 1
+    won: 1
+    drawn: 1
+    lost: 1
+    gd: 10
+  - name: Wolfpack
+    points: 20
+    played: 1
+    won: 1
+    drawn: 1
+    lost: 1
+    gd: 10
+  - name: Rainham WMC FC
+    points: 15
+    played: 1
+    won: 1
+    drawn: 1
+    lost: 1
+    gd: 10
+  - name: Eva Hart
+    points: 13
+    played: 1
+    won: 1
+    drawn: 1
+    lost: 1
+    gd: 10
+  - name: Loxford Lions
+    points: 10
+    played: 1
+    won: 1
+    drawn: 1
+    lost: 1
+    gd: 10
+  - name: Hainault Athletic
+    points: 9
+    played: 1
+    won: 1
+    drawn: 1
+    lost: 1
+    gd: 10
+  - name: Sher Force
+    points: 6
+    played: 1
+    won: 1
+    drawn: 1
+    lost: 1
+    gd: 10
 image: /img/home-jumbotron.jpg
 heading: Great coffee with a conscience
 subheading: Support sustainable farming while enjoying a cup
