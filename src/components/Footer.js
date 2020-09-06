@@ -24,27 +24,27 @@ const Footer = class extends React.Component {
             {/* TO DO add social media accounts */}
             <div className='column is-3'>
               <ul className='is-pulled-right' style={{ display: "flex" }}>
-                <li className='mr-3'>
+                {/* <li className='mr-3'>
                   <a
                     title='Follow us on Facebook'
-                    href='https://www.facebook.com/adrianpenuart'>
+                    href='https://www.facebook.com/'>
                     <i className='p-icon--facebook'></i>
                   </a>
-                </li>
+                </li> */}
                 <li className='mr-3'>
                   <a
                     title='Follow us on Instagram'
-                    href='https://www.instagram.com/adpenu/'>
+                    href='https://www.instagram.com/'>
                     <i className='p-icon--instagram'></i>
                   </a>
                 </li>
-                <li>
+                {/* <li>
                   <a
                     title='Follow us on Twitter'
-                    href='https://www.instagram.com/adpenu/'>
+                    href='https://www.instagram.com/'>
                     <i className='p-icon--twitter'></i>
                   </a>
-                </li>
+                </li> */}
               </ul>
             </div>
           </div>

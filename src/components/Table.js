@@ -1,6 +1,9 @@
 import React from "react";
+import { sortBy } from "lodash";
 
 const Table = ({ teams }) => {
+  const sortedTeams = sortBy(teams, ["points", "name"]);
+
   return (
     <div className='table-container'>
       <div className='table__title'>
@@ -55,7 +58,7 @@ const Table = ({ teams }) => {
           </tr>
         </thead>
         <tbody>
-          {teams.map((team, i) => (
+          {sortedTeams.map((team, i) => (
             <tr
               key={team.name}
               className={
@@ -64,11 +67,11 @@ const Table = ({ teams }) => {
               <td>{i + 1}</td>
               <td className='table__club'>{team.name}</td>
               <td>{team.played}</td>
-              <td>11</td>
-              <td>2</td>
-              <td>0</td>
-              <td>31</td>
-              <td>35</td>
+              <td>{team.won}</td>
+              <td>{team.drawn}</td>
+              <td>{team.lost}</td>
+              <td>{team.gd}</td>
+              <td>{team.points}</td>
             </tr>
           ))}
         </tbody>

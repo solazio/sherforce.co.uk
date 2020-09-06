@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+import { Helmet } from "react-helmet";
 import { graphql } from "gatsby";
 import Layout from "../components/Layout";
 import Content, { HTMLContent } from "../components/Content";
@@ -36,6 +37,10 @@ const HistoryPage = ({ data }) => {
 
   return (
     <Layout>
+      <Helmet titleTemplate={"%s | Sher Force FC"}>
+        <title>{post.frontmatter.title}</title>
+        <meta name='description' content={post.frontmatter.description} />
+      </Helmet>
       <HistoryPageTemplate
         contentComponent={HTMLContent}
         title={post.frontmatter.title}
@@ -57,6 +62,7 @@ export const aboutPageQuery = graphql`
       html
       frontmatter {
         title
+        description
       }
     }
   }

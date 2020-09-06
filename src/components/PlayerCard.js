@@ -15,7 +15,7 @@ const PlayerCard = (props) => {
           immageClass='card-image'
         />
         <div className='info-position'>
-          <i className={`p-icon-flag--${player.country}`}></i>
+          <i className={`p-icon-flag--${player.country.toLowerCase()}`}></i>
           <div className='is-size-1'>{overallAtt}</div>
           <div className='is-size-5'>{player.position}</div>
         </div>

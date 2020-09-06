@@ -1,11 +1,17 @@
 @mixin navigation {
   .navbar {
+    .navbar-item {
+      img {
+        max-height: 2rem;
+      }
+    }
+
     .navbar-end {
       text-transform: uppercase;
 
       .navbar-item {
         &.is-selected {
-          color: 	$link;
+          color: $link;
         }
       }
     }

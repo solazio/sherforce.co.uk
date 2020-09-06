@@ -2,6 +2,7 @@
   .player-bio {
     border-radius: 0.25rem;
     overflow: hidden;
+    width: 100%;
 
     .card-image-container {
       position: relative;
@@ -14,7 +15,7 @@
       }
 
       .info-position {
-        background: linear-gradient(90deg, #f14668 0%, transparent 200%);
+        background: linear-gradient(90deg, #1c1a1a 0%, transparent 200%);
         border-radius: 1rem 0 0 1rem;
         text-align: center;
         top: 50%;

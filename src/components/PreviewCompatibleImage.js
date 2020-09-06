@@ -37,9 +37,9 @@ PreviewCompatibleImage.propTypes = {
   imageInfo: PropTypes.shape({
     alt: PropTypes.string,
     childImageSharp: PropTypes.object,
-    image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]).isRequired,
+    image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
     style: PropTypes.object,
-  }).isRequired,
+  }),
   immageClass: PropTypes.string,
   alt: PropTypes.string,
 };

@@ -26,12 +26,7 @@ export const IndexPageTemplate = ({ title, teams }) => {
 
   return (
     <div>
-      <section
-        className='section has-image has-text-light is-slanted--left'
-        style={{
-          backgroundImage:
-            "linear-gradient(to top, rgba(94, 94, 94, 0.5) 0%, rgba(94, 94, 94, 0.5) 100%), url('/img/liverpool.png",
-        }}>
+      <section className='section has-image has-text-light is-slanted--left'>
         <div className='container'>
           <h1 className='is-size-1 pt-6'>{title}</h1>
           <FlipText />
@@ -52,15 +47,7 @@ export const IndexPageTemplate = ({ title, teams }) => {
 };
 
 IndexPageTemplate.propTypes = {
-  image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
   title: PropTypes.string,
-  heading: PropTypes.string,
-  subheading: PropTypes.string,
-  mainpitch: PropTypes.object,
-  description: PropTypes.string,
-  intro: PropTypes.shape({
-    blurbs: PropTypes.array,
-  }),
   teams: PropTypes.array,
 };
 
@@ -69,16 +56,7 @@ const IndexPage = ({ data }) => {
 
   return (
     <Layout>
-      <IndexPageTemplate
-        image={frontmatter.image}
-        title={frontmatter.title}
-        heading={frontmatter.heading}
-        subheading={frontmatter.subheading}
-        mainpitch={frontmatter.mainpitch}
-        description={frontmatter.description}
-        intro={frontmatter.intro}
-        teams={frontmatter.teams}
-      />
+      <IndexPageTemplate title={frontmatter.title} teams={frontmatter.teams} />
     </Layout>
   );
 };
@@ -98,13 +76,6 @@ export const pageQuery = graphql`
     markdownRemark(frontmatter: { templateKey: { eq: "index-page" } }) {
       frontmatter {
         title
-        image {
-          childImageSharp {
-            fluid(maxWidth: 2048, quality: 100) {
-              ...GatsbyImageSharpFluid
-            }
-          }
-        }
         teams {
           name
           points
@@ -113,27 +84,6 @@ export const pageQuery = graphql`
           drawn
           lost
           gd
-        }
-        heading
-        subheading
-        mainpitch {
-          title
-          description
-        }
-        description
-        intro {
-          blurbs {
-            image {
-              childImageSharp {
-                fluid(maxWidth: 240, quality: 64) {
-                  ...GatsbyImageSharpFluid
-                }
-              }
-            }
-            text
-          }
-          heading
-          description
         }
       }
     }

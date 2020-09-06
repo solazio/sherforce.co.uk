@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { Link } from "gatsby";
-import logo from "../img/logo.svg";
+import logo from "../../static/img/logo.png";
 
 const Navbar = class extends React.Component {
   constructor(props) {
@@ -42,8 +42,8 @@ const Navbar = class extends React.Component {
         <div className='container'>
           <div className='navbar-brand'>
             <Link to='/' className='navbar-item is-uppercase' title='Logo'>
-              {/* <img src={logo} alt='Kaldi' style={{ width: "88px" }} /> */}
-              Sher Force FC
+              <img src={logo} alt='Sher Force FC logo' />
+              <span className='pl-3 has-text-dark'>Sher Force FC</span>
             </Link>
             {/* Hamburger menu */}
             <div
@@ -119,4 +119,3 @@ Navbar.defaultProps = {
 };
 
 export default Navbar;
-

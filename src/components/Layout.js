@@ -16,7 +16,7 @@ const TemplateWrapper = ({ children }) => {
         <meta name='description' content={description} />
         <link rel='preconnect' href={url} />
         <link rel='canonical' href={url} />
-
+        {/* TO DO - add apple touch icon */}
         <link
           rel='apple-touch-icon'
           sizes='180x180'
@@ -24,8 +24,8 @@ const TemplateWrapper = ({ children }) => {
         />
         <link
           rel='icon'
-          type='image/svg+xml'
-          href={`${url}/img/logo.svg`}
+          type='image/png'
+          href={`${url}/img/logo.png`}
           sizes='32x32'
         />
         <link
@@ -35,20 +35,23 @@ const TemplateWrapper = ({ children }) => {
           sizes='16x16'
         />
 
-        <link rel='mask-icon' href={`${url}/img/logo.svg`} />
-        <meta name='theme-color' content='#c9c1a9' />
+        <link rel='mask-icon' href={`${url}/img/logo.png`} />
+        <meta name='theme-color' content='#1555a8' />
 
         {/* To DO add fb:app_id https://stackoverflow.com/questions/8845082/getting-fb-app-id-from-a-fb-page*/}
         <meta property='og:type' content='profile' />
         <meta property='og:title' content={title} />
         <meta property='og:description' content={description} />
         <meta property='og:url' content={url} />
-        <meta property='og:site_name' content='Adrian Penu'></meta>
-        <meta property='og:image' content={`${url}/img/adrian.jpg`} />
+        <meta property='og:site_name' content='Sher Force FC'></meta>
+        <meta property='og:image' content={`${url}/wallpaper-md.webp`} />
 
         <meta property='twitter:title' content={title} />
         <meta property='twitter:description' content={description} />
-        <meta property='twitter:image' content={`${url}/img/adrian.jpg`} />
+        <meta
+          property='twitter:image'
+          content={`${url}/img/wallpaper-md.webp`}
+        />
         {/* TO DO add twitter user name*/}
         <meta property='twitter:site' content='@username' />
 

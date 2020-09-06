@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+import { Helmet } from "react-helmet";
 import { graphql } from "gatsby";
 import Layout from "../components/Layout";
 import PlayerCard from "../components/PlayerCard";
@@ -29,6 +30,10 @@ const PlayersPage = ({ data }) => {
 
   return (
     <Layout>
+      <Helmet titleTemplate={"%s | Sher Force FC"}>
+        <title>{frontmatter.title}</title>
+        <meta name='description' content={frontmatter.description} />
+      </Helmet>
       <PlayersPageTemplate players={frontmatter.players} />
     </Layout>
   );
@@ -44,6 +49,8 @@ export const aboutPageQuery = graphql`
   query PlayersPage($id: String!) {
     markdownRemark(id: { eq: $id }) {
       frontmatter {
+        title
+        description
         players {
           name
           nickName
