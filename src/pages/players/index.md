@@ -37,7 +37,7 @@ players:
       defending: 83
   - name: Adriano Jorge Marreiros Dos Santos Barros
     nickName: Adriano
-    image: /img/adriano.webp
+    image: /img/adriano.jpg
     country: Portugal
     position: LB
     age: 38
@@ -69,7 +69,7 @@ players:
       defending: 83
   - name: Dilber Singh Gill
     nickName: Del
-    image: /img/del.webp
+    image: /img/del.jpg
     country: India
     position: CM
     age: 26
