@@ -29,7 +29,7 @@ const Table = ({ teams }) => {
       <table className='table'>
         <thead>
           <tr>
-            <th>
+            <th title='Position'>
               <span className='large-screen'>Position</span>
               <span className='small-screen'>Pos</span>
             </th>

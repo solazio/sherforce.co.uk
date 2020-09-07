@@ -52,12 +52,12 @@ teams:
     lost: 0
     gd: 0
   - name: Loxford Lions
-    points: 10
-    played: 1
-    won: 1
-    drawn: 1
-    lost: 1
-    gd: 10
+    points: 0
+    played: 0
+    won: 0
+    drawn: 0
+    lost: 0
+    gd: 0
   - name: Hainault Athletic
     points: 0
     played: 0

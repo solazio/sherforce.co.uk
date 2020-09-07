@@ -5,6 +5,7 @@ import PreviewCompatibleImage from "../components/PreviewCompatibleImage";
 
 const PlayerCard = (props) => {
   const { player } = props;
+  const { manager } = props;
   const overallAtt = Math.round(mean(Object.values(player.attributes)));
   return (
     <div className='card player-bio'>
@@ -14,6 +15,7 @@ const PlayerCard = (props) => {
           alt=''
           immageClass='card-image'
         />
+        {manager && <div className='manager-chip tag is-danger is-size-6'>Manager</div>}
         <div className='info-position'>
           <i className={`p-icon-flag--${player.country.toLowerCase()}`}></i>
           <div className='is-size-1'>{overallAtt}</div>

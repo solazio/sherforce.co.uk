@@ -2,7 +2,24 @@
 templateKey: "players-page"
 title: Players
 description: This is the list of the current Sher Force FC players
+managerName: Ravinder Sembi
 players:
+  - name: Ravinder Sembi
+    nickName: Roby
+    image: /img/avatar.png
+    country: England
+    position: CDM
+    age: 38
+    height: 165
+    weight: 60
+    foot: Right
+    attributes:
+      attacking: 45
+      skill: 77
+      movement: 44
+      power: 70
+      mentaly: 67
+      defending: 83
   - name: Ovidiu Suciu
     nickName: Ovi
     image: /img/avatar.png
@@ -107,6 +124,22 @@ players:
     age: 19
     height: 179
     weight: 75
+    foot: Right
+    attributes:
+      attacking: 45
+      skill: 77
+      movement: 44
+      power: 70
+      mentaly: 67
+      defending: 83
+  - name: Sehraan Hussain
+    nickName: Sam
+    image: /img/avatar.png
+    country: England
+    position: CM
+    age: 19
+    height: 188
+    weight: 80
     foot: Right
     attributes:
       attacking: 45
