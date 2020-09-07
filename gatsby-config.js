@@ -29,6 +29,13 @@ module.exports = {
         name: "images",
       },
     },
+    {
+      resolve: "gatsby-plugin-gtag",
+      options: {
+        trackingId: "UA-177265972-3",
+        head: true,
+      },
+    },
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
     {
