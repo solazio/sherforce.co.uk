@@ -20,6 +20,9 @@ export const HistoryPageTemplate = ({ title, content, contentComponent }) => {
       <section className='section'>
         <div className='container'>
           <PageContent className='content' content={content} />
+          <a className='button is-primary' href='/contact'>
+            Join the team
+          </a>
         </div>
       </section>
     </>
