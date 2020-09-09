@@ -4,7 +4,7 @@ path: /about
 title: Our history
 description: Sher Force Football Club is an affiliated English amateur football team based in Essex and was established in the summer of 2000 by co-owners Gurvinder Sembi and Sanjay Patel
 ---
-### Established 2002
+### Established 2000
 Sher Force Football Club is an affiliated English amateur football team based in Essex and was established in the summer of 2000 by co-owners Gurvinder Sembi and Sanjay Patel. Currently managed by player/manager Ravinder Sembi.
 
 ### Club colours: ⬛⬜
