@@ -23,13 +23,6 @@ module.exports = {
       },
     },
     {
-      resolve: "gatsby-source-filesystem",
-      options: {
-        path: `${__dirname}/src/img`,
-        name: "images",
-      },
-    },
-    {
       resolve: "gatsby-plugin-gtag",
       options: {
         trackingId: "UA-177265972-3",

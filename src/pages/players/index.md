@@ -6,7 +6,7 @@ managerName: Ravinder Sembi
 players:
   - name: Ravinder Sembi
     nickName: Roby
-    image: /img/avatar.png
+    image: /img/roby.jpg
     country: England
     position: CDM
     age: 38

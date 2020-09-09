@@ -18,8 +18,8 @@ const PlayerCard = (props) => {
         {manager && <div className='manager-chip tag is-danger is-size-6'>Manager</div>}
         <div className='info-position'>
           <i className={`p-icon-flag--${player.country.toLowerCase()}`}></i>
-          <div className='is-size-1'>{overallAtt}</div>
-          <div className='is-size-5'>{player.position}</div>
+          {/* <div className='is-size-1'>{overallAtt}</div> */}
+          <div className='is-size-4'>{player.position}</div>
         </div>
       </div>
       <div className='card-content pt-5'>
