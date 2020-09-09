@@ -75,7 +75,7 @@ const Navbar = class extends React.Component {
                 to='/players'>
                 Players
               </Link>
-              <Link
+              {/* <Link
                 className={
                   path === "/news" || path === "/news/"
                     ? "navbar-item is-selected"
@@ -83,7 +83,7 @@ const Navbar = class extends React.Component {
                 }
                 to='/news'>
                 News
-              </Link>
+              </Link> */}
               <Link
                 className={
                   path === "/history" || path === "/history/"

@@ -34,7 +34,7 @@ const Footer = class extends React.Component {
                 <li className='mr-3'>
                   <a
                     title='Follow us on Instagram'
-                    href='https://www.instagram.com/'>
+                    href='https://www.instagram.com/sherforce_fc/'>
                     <i className='p-icon--instagram'></i>
                   </a>
                 </li>
