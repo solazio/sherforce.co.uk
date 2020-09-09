@@ -7,6 +7,12 @@ const PlayerCard = (props) => {
   const { player } = props;
   const { manager } = props;
   const overallAtt = Math.round(mean(Object.values(player.attributes)));
+  const getAge = (birthDate) => {
+    const today = new Date();
+    return birthDate
+      ? Math.floor((today - new Date(birthDate)) / (1000 * 60 * 60 * 24 * 365))
+      : "?";
+  };
   return (
     <div className='card player-bio'>
       <div className='card-image-container'>
@@ -15,7 +21,9 @@ const PlayerCard = (props) => {
           alt=''
           immageClass='card-image'
         />
-        {manager && <div className='manager-chip tag is-danger is-size-6'>Manager</div>}
+        {manager && (
+          <div className='manager-chip tag is-danger is-size-6'>Manager</div>
+        )}
         <div className='info-position'>
           <i className={`p-icon-flag--${player.country.toLowerCase()}`}></i>
           {/* <div className='is-size-1'>{overallAtt}</div> */}
@@ -44,6 +52,12 @@ const PlayerCard = (props) => {
             <span className='tag'>Weight</span>
             <span className='tag is-danger is-pulled-right'>
               {player.weight} kg
+            </span>
+          </li>
+          <li className='divided-list__item'>
+            <span className='tag'>Age</span>
+            <span className='tag is-danger is-pulled-right'>
+              {getAge(player.birthDate)}
             </span>
           </li>
         </ul>

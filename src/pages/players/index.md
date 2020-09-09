@@ -9,7 +9,7 @@ players:
     image: /img/roby.jpg
     country: England
     position: CDM
-    age: 38
+    birthDate:
     height: 165
     weight: 60
     foot: Right
@@ -25,8 +25,8 @@ players:
     image: /img/avatar.png
     country: Romania
     position: CB
-    age: 34
-    height: 180
+    birthDate: 1985-09-08
+    height: 186
     weight: 88
     foot: Right
     attributes:
@@ -41,7 +41,7 @@ players:
     image: /img/avatar.png
     country: England
     position: LM
-    age: 38
+    birthDate: 1982-01-08
     height: 167
     weight: 69
     foot: Left
@@ -57,7 +57,7 @@ players:
     image: /img/adriano.jpg
     country: Portugal
     position: LB
-    age: 38
+    birthDate: 1981-09-06
     height: 172
     weight: 75
     foot: Right
@@ -73,7 +73,7 @@ players:
     image: /img/avatar.png
     country: Lithuania
     position: ST
-    age: 20
+    birthDate:
     height: 179
     weight: 70
     foot: Left
@@ -89,7 +89,7 @@ players:
     image: /img/del.jpg
     country: India
     position: CM
-    age: 26
+    birthDate:
     height: 190
     weight: 90
     foot: Right
@@ -105,7 +105,7 @@ players:
     image: /img/avatar.png
     country: England
     position: RB
-    age: 36
+    birthDate: 1984-06-09
     height: 178
     weight: 76
     foot: Right
@@ -121,7 +121,7 @@ players:
     image: /img/avatar.png
     country: England
     position: RW
-    age: 19
+    birthDate:
     height: 179
     weight: 75
     foot: Right
@@ -137,7 +137,7 @@ players:
     image: /img/avatar.png
     country: England
     position: CM
-    age: 19
+    birthDate:
     height: 188
     weight: 80
     foot: Right

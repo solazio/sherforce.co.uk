@@ -63,7 +63,7 @@ export const aboutPageQuery = graphql`
           nickName
           country
           position
-          age
+          birthDate
           height
           weight
           foot
