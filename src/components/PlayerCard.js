@@ -4,8 +4,7 @@ import { mean } from "lodash";
 import PreviewCompatibleImage from "../components/PreviewCompatibleImage";
 
 const PlayerCard = (props) => {
-  const { player } = props;
-  const { manager } = props;
+  const { player, manager, captain } = props;
   const overallAtt = Math.round(mean(Object.values(player.attributes)));
   const getAge = (birthDate) => {
     const today = new Date();
@@ -22,7 +21,22 @@ const PlayerCard = (props) => {
           immageClass='card-image'
         />
         {manager && (
-          <div className='manager-chip tag is-danger is-size-6'>Manager</div>
+          <i
+            className='extra-info-chip p-icon--manager'
+            title='Manager'
+            style={{
+              marginBlockStart: "0.25rem",
+              marginInlineStart: "0.25rem",
+            }}></i>
+        )}
+        {captain && (
+          <i
+            className='extra-info-chip p-icon--captain'
+            title='Captain'
+            style={{
+              marginBlockStart: "0.25rem",
+              marginInlineStart: "0.25rem",
+            }}></i>
         )}
         <div className='info-position'>
           <i className={`p-icon-flag--${player.country.toLowerCase()}`}></i>

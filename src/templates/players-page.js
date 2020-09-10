@@ -5,7 +5,7 @@ import { graphql } from "gatsby";
 import Layout from "../components/Layout";
 import PlayerCard from "../components/PlayerCard";
 
-export const PlayersPageTemplate = ({ players, managerName }) => {
+export const PlayersPageTemplate = ({ players, managerName, captainName }) => {
   return (
     <div className='section'>
       <div className='container'>
@@ -15,6 +15,7 @@ export const PlayersPageTemplate = ({ players, managerName }) => {
               <PlayerCard
                 player={player}
                 manager={player.name === managerName}
+                captain={player.name === captainName}
               />
             </div>
           ))}
@@ -40,6 +41,7 @@ const PlayersPage = ({ data }) => {
       <PlayersPageTemplate
         players={frontmatter.players}
         managerName={frontmatter.managerName}
+        captainName={frontmatter.captainName}
       />
     </Layout>
   );
@@ -58,6 +60,7 @@ export const aboutPageQuery = graphql`
         title
         description
         managerName
+        captainName
         players {
           name
           nickName

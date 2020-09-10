@@ -1,15 +1,16 @@
 ---
 templateKey: "players-page"
 title: Players
-description: This is the list of the current Sher Force FC players
+description: The list of the current Sher Force FC players
 managerName: Ravinder Sembi
+captainName: Gurcharan Rai
 players:
   - name: Ravinder Sembi
     nickName: Roby
     image: /img/roby.jpg
     country: England
     position: CDM
-    birthDate:
+    birthDate: 1981-11-09
     height: 165
     weight: 60
     foot: Right
@@ -19,22 +20,6 @@ players:
       movement: 44
       power: 70
       mentaly: 67
-      defending: 83
-  - name: Ovidiu Suciu
-    nickName: Ovi
-    image: /img/avatar.png
-    country: Romania
-    position: CB
-    birthDate: 1985-09-08
-    height: 186
-    weight: 88
-    foot: Right
-    attributes:
-      attacking: 56
-      skill: 48
-      movement: 44
-      power: 26
-      mentaly: 83
       defending: 83
   - name: Gurcharan Rai
     nickName: Gurt
@@ -50,6 +35,22 @@ players:
       skill: 48
       movement: 44
       power: 83
+      mentaly: 83
+      defending: 83
+  - name: Ovidiu Suciu
+    nickName: Ovi
+    image: /img/avatar.png
+    country: Romania
+    position: CB
+    birthDate: 1985-09-08
+    height: 186
+    weight: 88
+    foot: Right
+    attributes:
+      attacking: 56
+      skill: 48
+      movement: 44
+      power: 26
       mentaly: 83
       defending: 83
   - name: Adriano Jorge Marreiros Dos Santos Barros
