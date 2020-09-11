@@ -38,12 +38,14 @@ const TemplateWrapper = ({ children }) => {
         <meta name='theme-color' content='#1555a8' />
 
         {/* To DO add fb:app_id https://stackoverflow.com/questions/8845082/getting-fb-app-id-from-a-fb-page*/}
-        <meta property='og:type' content='profile' />
+        <meta property='og:type' content='website' />
         <meta property='og:title' content={title} />
         <meta property='og:description' content={description} />
         <meta property='og:url' content={url} />
         <meta property='og:site_name' content='Sher Force FC'></meta>
-        <meta property='og:image' content={`${url}/wallpaper-md.jpg`} />
+        <meta property='og:image' content={`${url}/img/wallpaper-md.jpg`} />
+        <meta property='og:image:width' content='1270' />
+        <meta property='og:image:height' content='953' />
 
         <meta property='twitter:title' content={title} />
         <meta property='twitter:description' content={description} />
