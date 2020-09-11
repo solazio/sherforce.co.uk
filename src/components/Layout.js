@@ -7,13 +7,14 @@ import "../sass/styles.scss";
 import useSiteMetadata from "./SiteMetadata";
 
 const TemplateWrapper = ({ children }) => {
-  const { title, description, url } = useSiteMetadata();
+  const { title, description, keywords, url } = useSiteMetadata();
   return (
     <div className='main'>
       <Helmet>
         <html lang='en' />
         <title>{title}</title>
         <meta name='description' content={description} />
+        <meta name='keywords' content={keywords} />
         <link rel='preconnect' href={url} />
         <link rel='canonical' href={url} />
         <link
