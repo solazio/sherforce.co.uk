@@ -1,9 +1,6 @@
 import React from "react";
-import { sortBy } from "lodash";
 
 const Table = ({ teams }) => {
-  const sortedTeams = sortBy(teams, ["points", "name"]);
-
   return (
     <div className='table-container'>
       <div className='table__title'>
@@ -17,7 +14,7 @@ const Table = ({ teams }) => {
           />
         </a>
         <a
-          href='http://fulltime-league.thefa.com/Index.do?divisionseason=546571348&league=2113065'
+          href='https://fulltime-league.thefa.com/ProcessPublicSelect.do?psSelectedSeason=997972047&psSelectedDivision=193785606&psSelectedCompetition=0&psSelectedLeague=2113065'
           className='table__title--text'>
           Division 2
         </a>
@@ -58,11 +55,13 @@ const Table = ({ teams }) => {
           </tr>
         </thead>
         <tbody>
-          {sortedTeams.map((team, i) => (
+          {teams.map((team, i) => (
             <tr
               key={team.name}
               className={
-                team.name === "Sher Force" ? "p-table__highlighted" : ""
+                team.name === "Sher Force (S) First"
+                  ? "p-table__highlighted"
+                  : ""
               }>
               <td>{i + 1}</td>
               <td className='table__club'>{team.name}</td>
