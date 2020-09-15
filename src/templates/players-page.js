@@ -19,7 +19,7 @@ export const PlayersPageTemplate = ({
     forwards = [];
 
   const defenderPositions = ["CB", "LB", "RB"];
-  const midfielderPositions = ["LM", "CM", "CDM", "RM"];
+  const midfielderPositions = ["LM", "CM", "CDM", "CAM", "RM"];
   const forwardPositions = ["ST", "RW", "LW"];
 
   allPlayers.forEach((player) => {

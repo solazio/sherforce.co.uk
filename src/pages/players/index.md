@@ -166,4 +166,36 @@ players:
       power: 70
       mentaly: 67
       defending: 83
+  - name: Prince Joseph
+    nickName: Prince
+    image: /img/avatar.png
+    country: England
+    position: ST
+    birthDate: 2001-05-15
+    height: 179
+    weight: 65
+    foot: Right
+    attributes:
+      attacking: 45
+      skill: 77
+      movement: 44
+      power: 70
+      mentaly: 67
+      defending: 83
+  - name: Kobby Aidoo
+    nickName: Kobby
+    image: /img/avatar.png
+    country: Ghana
+    position: CB
+    birthDate: 1969-08-24
+    height: 174
+    weight: 92
+    foot: Left
+    attributes:
+      attacking: 45
+      skill: 77
+      movement: 44
+      power: 70
+      mentaly: 67
+      defending: 83
 ---
