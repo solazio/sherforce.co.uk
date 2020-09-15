@@ -72,7 +72,7 @@ const Navbar = class extends React.Component {
                     ? "navbar-item is-selected"
                     : "navbar-item"
                 }
-                to='/players'>
+                to='/players/'>
                 Players
               </Link>
               {/* <Link
@@ -90,7 +90,7 @@ const Navbar = class extends React.Component {
                     ? "navbar-item is-selected"
                     : "navbar-item"
                 }
-                to='/history'>
+                to='/history/'>
                 History
               </Link>
               <Link
@@ -99,7 +99,7 @@ const Navbar = class extends React.Component {
                     ? "navbar-item is-selected"
                     : "navbar-item"
                 }
-                to='/contact'>
+                to='/contact/'>
                 Contact
               </Link>
             </div>

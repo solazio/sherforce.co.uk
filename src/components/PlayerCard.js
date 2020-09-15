@@ -6,11 +6,12 @@ import PreviewCompatibleImage from "../components/PreviewCompatibleImage";
 const PlayerCard = (props) => {
   const { player, manager, captain } = props;
   const overallAtt = Math.round(mean(Object.values(player.attributes)));
-  const getAge = (birthDate) => {
-    const today = new Date();
-    return birthDate
-      ? Math.floor((today - new Date(birthDate)) / (1000 * 60 * 60 * 24 * 365))
-      : "?";
+  const getAge = (dob) => {
+    const birthDate = new Date(dob)
+    const diff_ms = Date.now() - birthDate.getTime();
+    const age_dt = new Date(diff_ms);
+
+    return Math.abs(age_dt.getUTCFullYear() - 1970);
   };
   return (
     <div className='card player-bio'>

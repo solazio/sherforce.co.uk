@@ -4,6 +4,7 @@ title: Players
 description: The list of the current Sher Force FC players
 managerName: Ravinder Sembi
 captainName: Gurcharan Rai
+# birthDate format: YYYY-MM-DD
 players:
   - name: Ravinder Sembi
     nickName: Roby
@@ -42,7 +43,7 @@ players:
     image: /img/avatar.png
     country: Romania
     position: CB
-    birthDate: 1985-09-08
+    birthDate: 1985-04-07
     height: 186
     weight: 88
     foot: Right
@@ -58,7 +59,7 @@ players:
     image: /img/adriano.jpg
     country: Portugal
     position: LB
-    birthDate: 1981-09-06
+    birthDate: 1981-10-06
     height: 172
     weight: 75
     foot: Right
@@ -141,6 +142,22 @@ players:
     birthDate:
     height: 188
     weight: 80
+    foot: Right
+    attributes:
+      attacking: 45
+      skill: 77
+      movement: 44
+      power: 70
+      mentaly: 67
+      defending: 83
+  - name: Vikramjeet Singh
+    nickName: Vikks
+    image: /img/avatar.png
+    country: India
+    position: CB
+    birthDate: 2000-08-21
+    height: 193
+    weight: 90
     foot: Right
     attributes:
       attacking: 45
