@@ -4,7 +4,7 @@ module.exports = {
     description: "This is the official website of the Sher Force Football Club",
     url: "https://sherforcefc.co.uk",
     keywords:
-      "football, amateur, team, east london, training, play, sunday league",
+      "Sher Force FC team, sher force players, sher force football club players, sunday league team, east london football team",
   },
   plugins: [
     "gatsby-plugin-react-helmet",

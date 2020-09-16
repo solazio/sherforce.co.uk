@@ -43,6 +43,25 @@ const HistoryPage = ({ data }) => {
       <Helmet titleTemplate={"%s | Sher Force FC"}>
         <title>{post.frontmatter.title}</title>
         <meta name='description' content={post.frontmatter.description} />
+        <meta name='title' content={post.frontmatter.title} />
+        <meta
+          name='description'
+          content={post.frontmatter.description}
+        />
+        <meta
+          name='keywords'
+          content='Sher Force history, history, Sher Force club history'
+        />
+        <meta property='og:title' content={post.frontmatter.title} />
+        <meta
+          property='og:description'
+          content={post.frontmatter.description}
+        />
+        <meta property='twitter:title' content={post.frontmatter.title} />
+        <meta
+          property='twitter:description'
+          content={post.frontmatter.description}
+        />
       </Helmet>
       <HistoryPageTemplate
         contentComponent={HTMLContent}

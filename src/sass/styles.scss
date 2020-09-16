@@ -47,47 +47,8 @@ $color-background: #f7f7f7;
   }
 }
 
-// Import the framework
-// @import "node_modules/vanilla-framework/scss/vanilla";
-
-// Include vanilla patterns
-// @include vf-base;
-// @include vf-p-grid;
-// @include vf-p-strip;
-// @include vf-p-icons;
-// @include vf-p-headings;
-// @include vf-u-layout;
-// @include vf-u-hide;
-// @include vf-u-align;
-// @include vf-u-margin-collapse;
-// @include vf-u-padding-collapse;
-
-// color variables
-// $color-primary: #1555a8;
-// $color-secondary: #ff5964;
-// $color-accent: #23ce6b;
-// $color-background: #fff; // dark #1c1c1c
-// $color-light: #f7f7f7;
-
-// https://fonts.google.com/specimen/Poppins
-// @import url("https://fonts.googleapis.com/css?family=Poppins:300,500");
-
-// html {
-//   font-family: "Poppins", Helvetica, sans-serif;
-//   // font-family:  Helvetica, sans-serif;
-// }
-
-// @import "button";
-// @include button;
-
 @import "card";
 @include card;
-
-// @import "footer";
-// @include footer;
-
-// @import "link";
-// @include link;
 
 @import "icons";
 @include icons;
@@ -148,13 +109,13 @@ label {
   background-size: cover;
   min-height: 35rem;
 
-  @media screen and (max-width: $tablet){
+  @media screen and (max-width: $tablet) {
     background-image: linear-gradient(
-      to top,
-      rgba(94, 94, 94, 0.5) 0%,
-      rgba(94, 94, 94, 0.5) 100%
-    ),
-    url("/img/wallpaper-md.jpg");
+        to top,
+        rgba(94, 94, 94, 0.5) 0%,
+        rgba(94, 94, 94, 0.5) 100%
+      ),
+      url("/img/wallpaper-md.jpg");
   }
 }
 
@@ -318,4 +279,28 @@ p {
   input {
     max-width: 8rem;
   }
+}
+
+@media screen and (max-width: 550px) {
+  .tabs ul::after {
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0) 0%,
+    #f7f7f7 45%,
+    #f7f7f7 100%
+  );
+  color: #666;
+  content: "\203A";
+  display: block;
+  font-size: 2rem;
+  line-height: calc(100% + 1rem - 0.6875rem);
+  padding-left: 1rem;
+  padding-right: 1.5rem;
+  pointer-events: none;
+  position: absolute;
+  right: 0;
+  text-align: right;
+  top: 0;
+  width: 1rem;
+}
 }

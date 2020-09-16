@@ -1,6 +1,7 @@
 import React from "react";
 import { navigate } from "gatsby-link";
 import Layout from "../../components/Layout";
+import { Helmet } from "react-helmet";
 
 function encode(data) {
   return Object.keys(data)
@@ -36,6 +37,28 @@ export default class Index extends React.Component {
   render() {
     return (
       <Layout>
+        <Helmet titleTemplate={"%s | Sher Force FC"}>
+          <title>Contact us</title>
+          <meta name='title' content='Contact us' />
+          <meta
+            name='description'
+            content='Join Sher Force team, Ask a question'
+          />
+          <meta
+            name='keywords'
+            content='Contact us, join sher force team, ask a question, join the team'
+          />
+          <meta property='og:title' content='Contact us' />
+          <meta
+            property='og:description'
+            content='Join Sher Force team, Ask a question'
+          />
+          <meta property='twitter:title' content='Contact us' />
+          <meta
+            property='twitter:description'
+            content='Join Sher Force team, Ask a question'
+          />
+        </Helmet>
         <section className='hero is-medium is-primary is-slanted--right'>
           <div className='hero-body'>
             <div className='container'>
