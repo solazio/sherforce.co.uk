@@ -14,7 +14,8 @@ export const PlayersPageTemplate = ({
 }) => {
   const [players, setPlayers] = useState(allPlayers);
 
-  let defenders = [],
+  let goalkeepers = [],
+    defenders = [],
     midfielders = [],
     forwards = [];
 
@@ -29,6 +30,8 @@ export const PlayersPageTemplate = ({
       midfielders.push(player);
     } else if (forwardPositions.indexOf(player.position) > -1) {
       forwards.push(player);
+    } else if ("GK".indexOf(player.position) > -1) {
+      goalkeepers.push(player);
     }
   });
 
@@ -42,9 +45,9 @@ export const PlayersPageTemplate = ({
                 All
               </Link>
             </li>
-            <li className={hash === "#defenders" ? "is-active" : ""}>
-              <Link to='#defenders' onClick={() => setPlayers(defenders)}>
-                Defenders
+            <li className={hash === "#forwards" ? "is-active" : ""}>
+              <Link to='#forwards' onClick={() => setPlayers(forwards)}>
+                Forwards
               </Link>
             </li>
             <li className={hash === "#midfielders" ? "is-active" : ""}>
@@ -52,9 +55,14 @@ export const PlayersPageTemplate = ({
                 Midfielders
               </Link>
             </li>
-            <li className={hash === "#forwards" ? "is-active" : ""}>
-              <Link to='#forwards' onClick={() => setPlayers(forwards)}>
-                Forwards
+            <li className={hash === "#defenders" ? "is-active" : ""}>
+              <Link to='#defenders' onClick={() => setPlayers(defenders)}>
+                Defenders
+              </Link>
+            </li>
+            <li className={hash === "#goalkeepers" ? "is-active" : ""}>
+              <Link to='#goalkeepers' onClick={() => setPlayers(goalkeepers)}>
+                Goalkeepers
               </Link>
             </li>
           </ul>

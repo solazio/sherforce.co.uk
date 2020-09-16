@@ -4,7 +4,6 @@ title: Players
 description: The list of the current Sher Force FC players
 managerName: Ravinder Sembi
 captainName: Gurcharan Rai
-# birthDate format: YYYY-MM-DD
 players:
   - name: Ravinder Sembi
     nickName: Roby
@@ -123,7 +122,7 @@ players:
     image: /img/avatar.png
     country: England
     position: RW
-    birthDate:
+    birthDate: 2001-09-04
     height: 179
     weight: 75
     foot: Right

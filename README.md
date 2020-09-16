@@ -127,6 +127,7 @@ please read the [code of conduct](CODE_OF_CONDUCT.md).
 
 
 ## Useful
+Players birthDate format: YYYY-MM-DD
 https://www.otfc.org.uk/1st-xi-team/
 https://fulltime-league.thefa.com/js/cs1.do?cs=118456231&random=0.1704203609289056
 https://codepen.io/loiclaudet/pen/eZWLWj

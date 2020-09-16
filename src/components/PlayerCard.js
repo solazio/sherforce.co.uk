@@ -11,7 +11,7 @@ const PlayerCard = (props) => {
     const diff_ms = Date.now() - birthDate.getTime();
     const age_dt = new Date(diff_ms);
 
-    return Math.abs(age_dt.getUTCFullYear() - 1970);
+    return dob ? Math.abs(age_dt.getUTCFullYear() - 1970) : "?";
   };
   return (
     <div className='card player-bio'>
@@ -54,7 +54,7 @@ const PlayerCard = (props) => {
         {/* <p className='subtitle is-6'>@johnsmith</p> */}
         <ul className='divided-list'>
           <li className='divided-list__item'>
-            <span className='tag'>Preffered foot</span>
+            <span className='tag'>Preferred foot</span>
             <span className='tag is-danger is-pulled-right'>{player.foot}</span>
           </li>
           <li className='divided-list__item'>
