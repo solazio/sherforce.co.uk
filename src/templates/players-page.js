@@ -1,18 +1,19 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import PropTypes from "prop-types";
 import { globalHistory } from "@reach/router";
 import { Helmet } from "react-helmet";
 import { graphql, Link } from "gatsby";
 import Layout from "../components/Layout";
 import PlayerCard from "../components/PlayerCard";
+import { useLocation } from "@reach/router";
 
 export const PlayersPageTemplate = ({
   allPlayers,
   managerName,
   captainName,
-  hash,
 }) => {
   const [players, setPlayers] = useState(allPlayers);
+  const hash = useLocation().hash;
 
   let goalkeepers = [],
     defenders = [],
@@ -35,33 +36,49 @@ export const PlayersPageTemplate = ({
     }
   });
 
+  useEffect(() => {
+    if (hash) {
+      if (hash === "#forwards") {
+        setPlayers(forwards);
+      } else if (hash === "#midfielders") {
+        setPlayers(midfielders);
+      } else if (hash === "#defenders") {
+        setPlayers(defenders);
+      } else if (hash === "#goalkeepers") {
+        setPlayers(goalkeepers);
+      } else if (hash === "#all") {
+        setPlayers(allPlayers);
+      }
+    }
+  }, [hash]);
+
   return (
     <div className='section'>
       <div className='container'>
         <div className='tabs'>
           <ul>
             <li className={!hash || hash === "#all" ? "is-active" : ""}>
-              <Link to='#all' onClick={() => setPlayers(allPlayers)}>
+              <Link to='#all'>
                 All
               </Link>
             </li>
-            <li className={hash === "#forwards" ? "is-active" : ""}>
-              <Link to='#forwards' onClick={() => setPlayers(forwards)}>
+            <li className={hash && hash === "#forwards" ? "is-active" : ""}>
+              <Link to='#forwards'>
                 Forwards
               </Link>
             </li>
-            <li className={hash === "#midfielders" ? "is-active" : ""}>
-              <Link to='#midfielders' onClick={() => setPlayers(midfielders)}>
+            <li className={hash && hash === "#midfielders" ? "is-active" : ""}>
+              <Link to='#midfielders'>
                 Midfielders
               </Link>
             </li>
-            <li className={hash === "#defenders" ? "is-active" : ""}>
-              <Link to='#defenders' onClick={() => setPlayers(defenders)}>
+            <li className={hash && hash === "#defenders" ? "is-active" : ""}>
+              <Link to='#defenders'>
                 Defenders
               </Link>
             </li>
-            <li className={hash === "#goalkeepers" ? "is-active" : ""}>
-              <Link to='#goalkeepers' onClick={() => setPlayers(goalkeepers)}>
+            <li className={hash && hash === "#goalkeepers" ? "is-active" : ""}>
+              <Link to='#goalkeepers'>
                 Goalkeepers
               </Link>
             </li>
