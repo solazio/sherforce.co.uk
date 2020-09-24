@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: "Sher Force FC",
     description: "This is the official website of the Sher Force Football Club",
-    url: "https://sherforcefc.co.uk",
+    siteUrl: "https://sherforcefc.co.uk",
     keywords:
       "Sher Force FC team, sher force players, sher force football club players, sunday league team, east london football team",
   },
@@ -33,6 +33,12 @@ module.exports = {
     },
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
+    {
+      resolve: `gatsby-plugin-sitemap`,
+      options: {
+        exclude: [`/tags/*`, `/tags`],
+      },
+    },
     {
       resolve: "gatsby-transformer-remark",
       options: {

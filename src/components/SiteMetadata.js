@@ -8,7 +8,7 @@ const useSiteMetadata = () => {
           siteMetadata {
             title
             description
-            url
+            siteUrl
             keywords
           }
         }
