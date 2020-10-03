@@ -17,7 +17,7 @@ export const IndexPageTemplate = ({ title, teams }) => {
           <h1 className='is-size-1 pt-6'>{title}</h1>
           <FlipText />
           <h2 className="is-size-4 pb-5">
-            We are always looking for new talented players to join our team.
+            We are always looking for new talented players to join our team
           </h2>
           <p>
             <Link to='/contact' className='button is-primary'>

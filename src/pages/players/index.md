@@ -202,7 +202,7 @@ players:
     image: /img/avatar.png
     country: England
     position: RB
-    birthDate: 1999-04-10
+    birthDate: 1999-10-04
     height: 183
     weight: 74
     foot: Right
