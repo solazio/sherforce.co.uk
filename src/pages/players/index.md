@@ -213,4 +213,20 @@ players:
       power: 70
       mentaly: 67
       defending: 83
+  - name: Kuldip Bahra
+    nickName: Kip
+    image: /img/avatar.png
+    country: England
+    position: RB
+    birthDate: 1986-01-31
+    height: 192
+    weight: 97
+    foot: Right
+    attributes:
+      attacking: 45
+      skill: 77
+      movement: 44
+      power: 70
+      mentaly: 67
+      defending: 83
 ---
