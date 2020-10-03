@@ -217,10 +217,26 @@ players:
     nickName: Kip
     image: /img/avatar.png
     country: England
-    position: RB
+    position: CB
     birthDate: 1986-01-31
     height: 192
     weight: 97
+    foot: Right
+    attributes:
+      attacking: 45
+      skill: 77
+      movement: 44
+      power: 70
+      mentaly: 67
+      defending: 83
+  - name: Joe Dunn
+    nickName: Joey
+    image: /img/joe.jpg
+    country: England
+    position: GK
+    birthDate: 1991-08-30
+    height: 165
+    weight: 80
     foot: Right
     attributes:
       attacking: 45
