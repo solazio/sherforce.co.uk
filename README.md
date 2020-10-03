@@ -125,11 +125,3 @@ This plugin uses [gatsby-plugin-purgecss](https://www.gatsbyjs.org/packages/gats
 Contributions are always welcome, no matter how large or small. Before contributing,
 please read the [code of conduct](CODE_OF_CONDUCT.md).
 
-
-## Useful
-Players birthDate format: YYYY-MM-DD
-https://www.otfc.org.uk/1st-xi-team/
-https://fulltime-league.thefa.com/js/cs1.do?cs=118456231&random=0.1704203609289056
-https://codepen.io/loiclaudet/pen/eZWLWj
-https://flagicons.lipis.dev/?continent=Europe
-https://www.fifauteam.com/fifa-20-attributes-guide/
