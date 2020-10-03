@@ -9,6 +9,10 @@
       padding-left: 0.75rem;
       padding-bottom: 0.75rem;
 
+      @media screen and (max-width: $tablet){
+        padding-left: 0;
+      }
+
       .table__title--image {
         display: flex;
         align-items: center;

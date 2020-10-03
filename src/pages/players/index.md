@@ -3,7 +3,7 @@ templateKey: "players-page"
 title: Players
 description: The list of the current Sher Force FC players
 managerName: Ravinder Sembi
-captainName: Gurcharan Rai
+captainName: Kalvinder Rai
 players:
   - name: Ravinder Sembi
     nickName: Roby
@@ -21,9 +21,25 @@ players:
       power: 70
       mentaly: 67
       defending: 83
+  - name: Kalvinder Rai
+    nickName: Kal
+    image: /img/kal.jpg
+    country: England
+    position: RB
+    birthDate: 1984-06-09
+    height: 178
+    weight: 76
+    foot: Right
+    attributes:
+      attacking: 45
+      skill: 77
+      movement: 44
+      power: 70
+      mentaly: 67
+      defending: 83
   - name: Gurcharan Rai
     nickName: Gurt
-    image: /img/avatar.png
+    image: /img/gurt.jpg
     country: England
     position: LM
     birthDate: 1982-01-08
@@ -39,7 +55,7 @@ players:
       defending: 83
   - name: Ovidiu Suciu
     nickName: Ovi
-    image: /img/avatar.png
+    image: /img/ovi.jpg
     country: Romania
     position: CB
     birthDate: 1985-04-07
@@ -101,22 +117,6 @@ players:
       power: 70
       mentaly: 67
       defending: 83
-  - name: Kalvinder Rai
-    nickName: Kal
-    image: /img/avatar.png
-    country: England
-    position: RB
-    birthDate: 1984-06-09
-    height: 178
-    weight: 76
-    foot: Right
-    attributes:
-      attacking: 45
-      skill: 77
-      movement: 44
-      power: 70
-      mentaly: 67
-      defending: 83
   - name: Jaymin Varsani
     nickName: Jay
     image: /img/avatar.png
@@ -167,7 +167,7 @@ players:
       defending: 83
   - name: Prince Joseph
     nickName: Prince
-    image: /img/avatar.png
+    image: /img/prince.jpg
     country: England
     position: ST
     birthDate: 2001-05-15
@@ -190,6 +190,22 @@ players:
     height: 174
     weight: 92
     foot: Left
+    attributes:
+      attacking: 45
+      skill: 77
+      movement: 44
+      power: 70
+      mentaly: 67
+      defending: 83
+  - name: Nirujan Sokkan
+    nickName: Niru
+    image: /img/avatar.png
+    country: England
+    position: RB
+    birthDate: 1999-04-10
+    height: 183
+    weight: 74
+    foot: Right
     attributes:
       attacking: 45
       skill: 77
