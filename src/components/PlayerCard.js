@@ -1,11 +1,8 @@
 import React from "react";
-import { mean } from "lodash";
-
 import PreviewCompatibleImage from "../components/PreviewCompatibleImage";
 
 const PlayerCard = (props) => {
   const { player, manager, captain } = props;
-  const overallAtt = Math.round(mean(Object.values(player.attributes)));
   const getAge = (dob) => {
     const birthDate = new Date(dob)
     const diff_ms = Date.now() - birthDate.getTime();
@@ -41,7 +38,6 @@ const PlayerCard = (props) => {
         )}
         <div className='info-position'>
           <i className={`p-icon-flag--${player.country.toLowerCase()}`}></i>
-          {/* <div className='is-size-1'>{overallAtt}</div> */}
           <div className='is-size-4'>{player.position}</div>
         </div>
       </div>

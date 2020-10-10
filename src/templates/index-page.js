@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import PropTypes from "prop-types";
 import { Link, graphql } from "gatsby";
 
@@ -7,6 +7,20 @@ import Table from "../components/Table";
 import FlipText from "../components/FlipText";
 
 export const IndexPageTemplate = ({ title, teams }) => {
+  // Client-side Runtime Data Fetching
+  const [starsCount, setStarsCount] = useState(0)
+  useEffect(() => {
+    fetch(`/.netlify/functions/hello`)
+      .then((response) => response.json()) // parse JSON from request
+      .then((resultData) => {
+        setStarsCount(resultData);
+        console.log(starsCount);
+      });
+  }, [])
+  // fetch("/.netlify/functions/hello")
+  //  .then(response => response.json())
+  //  .then(console.log)
+
   return (
     <div>
       <section className='section has-image has-text-light'></section>

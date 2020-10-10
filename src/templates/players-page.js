@@ -50,7 +50,7 @@ export const PlayersPageTemplate = ({
         setPlayers(allPlayers);
       }
     }
-  }, [hash]);
+  }, [hash, allPlayers, forwards, midfielders, defenders,goalkeepers]);
 
   return (
     <div className='section'>

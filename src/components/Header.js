@@ -24,6 +24,8 @@ export const Navbar = () => {
           <div
             className={`navbar-burger burger ${navBarActiveClass}`}
             data-target='navMenu'
+            role='menu'
+            tabIndex='0'
             onClick={() => {
               setActive(!active);
               if (active) {
