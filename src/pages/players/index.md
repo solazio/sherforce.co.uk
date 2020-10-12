@@ -245,4 +245,20 @@ players:
       power: 70
       mentaly: 67
       defending: 83
+  - name: Atiq Rehman
+    nickName: T
+    image: /img/avatar.png
+    country: England
+    position: CF
+    birthDate: 1978-01-24
+    height: 182
+    weight: 89
+    foot: Right
+    attributes:
+      attacking: 45
+      skill: 77
+      movement: 44
+      power: 70
+      mentaly: 67
+      defending: 83
 ---

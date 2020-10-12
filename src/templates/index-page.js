@@ -8,13 +8,13 @@ import FlipText from "../components/FlipText";
 
 export const IndexPageTemplate = ({ title, teams }) => {
   // Client-side Runtime Data Fetching
-  const [starsCount, setStarsCount] = useState(0)
+  const [starsCount, setStarsCount] = useState({})
   useEffect(() => {
     fetch(`/.netlify/functions/hello`)
       .then((response) => response.json()) // parse JSON from request
       .then((resultData) => {
         setStarsCount(resultData);
-        console.log(starsCount);
+        console.log(resultData);
       });
   }, [])
   // fetch("/.netlify/functions/hello")

@@ -1,14 +1,30 @@
-// For more info, check https://docs.netlify.com/functions/build-with-javascript
-module.exports.handler = async function(event, context) {
-  console.log("queryStringParameters", event.queryStringParameters)
-  return {
-    // return null to show no errors
-    statusCode: 200, // http status code
-    body: JSON.stringify({
-      msg: "Hello, World! This is better " + Math.round(Math.random() * 10)
-    })
-  }
-}
+import fetch from "node-fetch";
+
+const API_ENDPOINT =
+  "https://fulltime-league.thefa.com/js/cs1.do?cs=758712583&random=0.6788346663396352";
+
+exports.handler = async (event, context) => {
+  return fetch(API_ENDPOINT)
+    .then((response) => response.text())
+    .then((data) => ({
+      statusCode: 200,
+      body: data.split("= '      ")[1].split("       ';")[0],
+    }))
+    .catch((error) => ({ statusCode: 422, body: String(error) }));
+};
+
+// function extractTable() {
+//   var data = [];
+
+//   var table = document.getElementById("table");
+//   for (var i = 0, row; (row = table.rows[i]); i++) {
+//     for (var j = 0, col; (col = row.cells[j]); j++) {
+//       data.push(col.innerText);
+//     }
+//   }
+
+//   document.getElementById("result").innerHTML = JSON.stringify(data, null, 4);
+// }
 
 // Now you are ready to access this API from anywhere in your Gatsby app! For example, in any event handler or lifecycle method, insert:
 // fetch("/.netlify/functions/hello")
