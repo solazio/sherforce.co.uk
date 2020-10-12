@@ -1,14 +1,15 @@
-import fetch from "node-fetch";
-
-const API_ENDPOINT =
-  "https://fulltime-league.thefa.com/js/cs1.do?cs=758712583&random=0.6788346663396352";
 
 exports.handler = async (event, context) => {
+  import fetch from "node-fetch";
+
+  const API_ENDPOINT =
+    "https://fulltime-league.thefa.com/js/cs1.do?cs=758712583&random=0.6788346663396352";
+
   return fetch(API_ENDPOINT)
     .then((response) => response.text())
     .then((data) => ({
       statusCode: 200,
-      body: data.split("= '      ")[1].split("       ';")[0],
+      body: { tableData: data.split("= '      ")[1].split("       ';")[0] },
     }))
     .catch((error) => ({ statusCode: 422, body: String(error) }));
 };
