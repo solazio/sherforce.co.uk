@@ -87,7 +87,7 @@ players:
       defending: 83
   - name: Matas Juknevicius
     nickName: Matz
-    image: /img/avatar.png
+    image: /img/matz.jpg
     country: Lithuania
     position: ST
     birthDate:
