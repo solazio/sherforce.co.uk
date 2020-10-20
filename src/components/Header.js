@@ -57,7 +57,7 @@ export const Navbar = () => {
               to='/players/'>
               Players
             </Link>
-            {/* <Link
+            <Link
                 className={
                   path === "/news" || path === "/news/"
                     ? "navbar-item is-selected"
@@ -65,7 +65,7 @@ export const Navbar = () => {
                 }
                 to='/news'>
                 News
-              </Link> */}
+              </Link>
             <Link
               className={
                 path === "/history" || path === "/history/"
