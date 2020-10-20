@@ -101,6 +101,22 @@ players:
       power: 70
       mentaly: 67
       defending: 83
+  - name: Johann
+    nickName: JD
+    image: /img/johann.jpg
+    country: England
+    position: LW
+    birthDate: 2002-08-06
+    height: 175
+    weight: 70
+    foot: Both
+    attributes:
+      attacking: 45
+      skill: 77
+      movement: 44
+      power: 70
+      mentaly: 67
+      defending: 83
   - name: Dilber Singh Gill
     nickName: Del
     image: /img/del.jpg
@@ -235,7 +251,7 @@ players:
     country: England
     position: GK
     birthDate: 1991-08-30
-    height: 165
+    height: 185
     weight: 80
     foot: Right
     attributes:
@@ -263,7 +279,7 @@ players:
       defending: 83
   - name: Valerio Milello
     nickName: Vale
-    image: /img/valerio.png
+    image: /img/valerio.jpg
     country: Italy
     position: RW
     birthDate: 1991-04-17
