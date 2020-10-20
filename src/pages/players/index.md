@@ -261,4 +261,20 @@ players:
       power: 70
       mentaly: 67
       defending: 83
+  - name: Valerio Milello
+    nickName: Vale
+    image: /img/valerio.png
+    country: Italy
+    position: RW
+    birthDate: 1991-04-17
+    height: 175
+    weight: 75
+    foot: Right
+    attributes:
+      attacking: 45
+      skill: 77
+      movement: 44
+      power: 70
+      mentaly: 67
+      defending: 83
 ---
