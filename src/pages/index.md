@@ -1,68 +1,296 @@
 ---
-templateKey: index-page
-title: Sher Force Football Club
-teams:
-  - name: Essex Minors (Hornchurch) (S) First
-    played: 4
-    won: 4
-    drawn: 0
-    lost: 0
-    gd: 12
-    points: 12
-  - name: Belfry  Sunday Reserves
-    played: 4
-    won: 2
-    drawn: 1
-    lost: 1
-    gd: 2
-    points: 7
-  - name: Hainault Athletic (S) First
-    played: 4
-    won: 1
-    drawn: 2
-    lost: 1
-    gd: -1
-    points: 5
-  - name: Something from Nothing (S) First
-    played: 2
-    won: 1
-    drawn: 1
-    lost: 0
-    gd: 3
-    points: 4
-  - name: Cardinals Athletic (S) First
-    played: 4
-    won: 1
-    drawn: 1
-    lost: 2
-    gd: 2
-    points: 4
-  - name: Horse & Well (S) First
-    played: 2
-    won: 1
-    drawn: 1
-    lost: 0
-    gd: 1
-    points: 4
-  - name: Sher Force (S) First
-    played: 3
-    won: 1
-    drawn: 0
-    lost: 2
-    gd: -5
-    points: 3
-  - name: Beckton Gas (S) First
-    played: 4
-    won: 1
-    drawn: 0
-    lost: 3
-    gd: -8
-    points: 3
-  - name: Barking Colts (S) First
-    played: 3
-    won: 0
-    drawn: 0
-    lost: 3
-    gd: -6
-    points: 0
+templateKey: "players-page"
+title: Players
+description: The list of the current Sher Force FC players
+managerName: Ravinder Sembi
+captainName: Kalvinder Rai
+players:
+  - name: Ravinder Sembi
+    nickName: Roby
+    image: /img/roby.jpg
+    country: England
+    position: CDM
+    birthDate: 1981-11-09
+    height: 165
+    weight: 60
+    foot: Right
+    attributes:
+      attacking: 30
+      skill: 30
+      movement: 30
+      power: 30
+      mentaly: 30
+      defending: 30
+  - name: Kalvinder Rai
+    nickName: Kal
+    image: /img/kal.jpg
+    country: England
+    position: RB
+    birthDate: 1984-06-09
+    height: 178
+    weight: 76
+    foot: Right
+    attributes:
+      attacking: 45
+      skill: 77
+      movement: 44
+      power: 70
+      mentaly: 67
+      defending: 83
+  - name: Gurcharan Rai
+    nickName: Gurt
+    image: /img/gurt.jpg
+    country: England
+    position: LM
+    birthDate: 1982-01-08
+    height: 167
+    weight: 69
+    foot: Left
+    attributes:
+      attacking: 56
+      skill: 48
+      movement: 44
+      power: 83
+      mentaly: 83
+      defending: 83
+  - name: Ovidiu Suciu
+    nickName: Ovi
+    image: /img/ovi.jpg
+    country: Romania
+    position: CB
+    birthDate: 1985-04-07
+    height: 186
+    weight: 88
+    foot: Right
+    attributes:
+      attacking: 56
+      skill: 48
+      movement: 44
+      power: 26
+      mentaly: 83
+      defending: 83
+  - name: Adriano Jorge Marreiros Dos Santos Barros
+    nickName: Adriano
+    image: /img/adriano.jpg
+    country: Portugal
+    position: LB
+    birthDate: 1981-10-06
+    height: 172
+    weight: 75
+    foot: Right
+    attributes:
+      attacking: 45
+      skill: 77
+      movement: 44
+      power: 70
+      mentaly: 67
+      defending: 83
+  - name: Matas Juknevicius
+    nickName: Matz
+    image: /img/matz.jpg
+    country: Lithuania
+    position: ST
+    birthDate:
+    height: 179
+    weight: 70
+    foot: Left
+    attributes:
+      attacking: 45
+      skill: 77
+      movement: 44
+      power: 70
+      mentaly: 67
+      defending: 83
+  - name: Johann
+    nickName: JD
+    image: /img/johann.jpg
+    country: England
+    position: LW
+    birthDate: 2002-08-06
+    height: 175
+    weight: 70
+    foot: Both
+    attributes:
+      attacking: 45
+      skill: 77
+      movement: 44
+      power: 70
+      mentaly: 67
+      defending: 83
+  - name: Dilber Singh Gill
+    nickName: Del
+    image: /img/del.jpg
+    country: India
+    position: CM
+    birthDate:
+    height: 190
+    weight: 90
+    foot: Right
+    attributes:
+      attacking: 45
+      skill: 77
+      movement: 44
+      power: 70
+      mentaly: 67
+      defending: 83
+  - name: Jaymin Varsani
+    nickName: Jay
+    image: /img/avatar.png
+    country: England
+    position: RW
+    birthDate: 2001-09-04
+    height: 179
+    weight: 75
+    foot: Right
+    attributes:
+      attacking: 45
+      skill: 77
+      movement: 44
+      power: 70
+      mentaly: 67
+      defending: 83
+  - name: Sehraan Hussain
+    nickName: Sam
+    image: /img/avatar.png
+    country: England
+    position: CM
+    birthDate:
+    height: 188
+    weight: 80
+    foot: Right
+    attributes:
+      attacking: 45
+      skill: 77
+      movement: 44
+      power: 70
+      mentaly: 67
+      defending: 83
+  - name: Vikramjeet Singh
+    nickName: Vikks
+    image: /img/avatar.png
+    country: India
+    position: CB
+    birthDate: 2000-08-21
+    height: 193
+    weight: 90
+    foot: Right
+    attributes:
+      attacking: 45
+      skill: 77
+      movement: 44
+      power: 70
+      mentaly: 67
+      defending: 83
+  - name: Prince Joseph
+    nickName: Prince
+    image: /img/prince.jpg
+    country: England
+    position: ST
+    birthDate: 2001-05-15
+    height: 179
+    weight: 65
+    foot: Right
+    attributes:
+      attacking: 45
+      skill: 77
+      movement: 44
+      power: 70
+      mentaly: 67
+      defending: 83
+  - name: Kobby Aidoo
+    nickName: Kobby
+    image: /img/avatar.png
+    country: Ghana
+    position: CB
+    birthDate: 1969-08-24
+    height: 174
+    weight: 92
+    foot: Left
+    attributes:
+      attacking: 45
+      skill: 77
+      movement: 44
+      power: 70
+      mentaly: 67
+      defending: 83
+  - name: Nirujan Sokkan
+    nickName: Niru
+    image: /img/avatar.png
+    country: England
+    position: RB
+    birthDate: 1999-10-04
+    height: 183
+    weight: 74
+    foot: Right
+    attributes:
+      attacking: 45
+      skill: 77
+      movement: 44
+      power: 70
+      mentaly: 67
+      defending: 83
+  - name: Kuldip Bahra
+    nickName: Kip
+    image: /img/avatar.png
+    country: England
+    position: CB
+    birthDate: 1986-01-31
+    height: 192
+    weight: 97
+    foot: Right
+    attributes:
+      attacking: 45
+      skill: 77
+      movement: 44
+      power: 70
+      mentaly: 67
+      defending: 83
+  - name: Joe Dunn
+    nickName: Joey
+    image: /img/joe.jpg
+    country: England
+    position: GK
+    birthDate: 1991-08-30
+    height: 185
+    weight: 80
+    foot: Right
+    attributes:
+      attacking: 45
+      skill: 77
+      movement: 44
+      power: 70
+      mentaly: 67
+      defending: 83
+  - name: Atiq Rehman
+    nickName: T
+    image: /img/avatar.png
+    country: England
+    position: CF
+    birthDate: 1978-01-24
+    height: 182
+    weight: 89
+    foot: Right
+    attributes:
+      attacking: 45
+      skill: 77
+      movement: 44
+      power: 70
+      mentaly: 67
+      defending: 83
+  - name: Valerio Milello
+    nickName: Vale
+    image: /img/valerio.jpg
+    country: Italy
+    position: RW
+    birthDate: 1991-04-17
+    height: 175
+    weight: 75
+    foot: Right
+    attributes:
+      attacking: 45
+      skill: 77
+      movement: 44
+      power: 70
+      mentaly: 67
+      defending: 83
 ---
