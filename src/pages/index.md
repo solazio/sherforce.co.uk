@@ -3,10 +3,10 @@ templateKey: index-page
 title: Sher Force Football Club
 teams:
   - name: Essex Minors (Hornchurch) (S) First
-    played: 4
-    won: 4
-    drawn: 0
-    lost: 0
+    played: 2
+    won: 2
+    drawn: 2
+    lost: 2
     gd: 12
     points: 12
   - name: Belfry  Sunday Reserves
