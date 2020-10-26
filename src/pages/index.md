@@ -23,7 +23,7 @@ teams:
     lost: 0
     gd: 3
     points: 7
-  - name: Belfry Sunday Reserves
+  - name: Belfry  Sunday Reserves
     played: 4
     won: 2
     drawn: 1
