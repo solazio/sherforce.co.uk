@@ -100,10 +100,10 @@ label {
 .section.has-image {
   background-image: linear-gradient(
       to top right,
-      rgba(18, 18, 18, 1) 0%,
-      rgba(18, 18, 18, 1) 49.3%,
-      rgba(18, 18, 18, 0) 50%,
-      rgba(18, 18, 18, 0) 100%
+      rgb(255, 255, 255) 0%,
+      rgb(255, 255, 255) 49.3%,
+      rgba(255, 255, 255, 0) 50%,
+      rgba(255, 255, 255, 0) 100%
     ),
     url("/img/wallpaper-lg.jpg");
   background-position: bottom left, top;

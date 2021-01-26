@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import PropTypes from "prop-types";
 import { Link, graphql } from "gatsby";
 
@@ -7,34 +7,19 @@ import Table from "../components/Table";
 import FlipText from "../components/FlipText";
 
 export const IndexPageTemplate = ({ title, teams }) => {
-  // Client-side Runtime Data Fetching
-  // const [starsCount, setStarsCount] = useState({})
-  // useEffect(() => {
-  //   fetch(`/.netlify/functions/hello`)
-  //     .then((response) => response.json()) // parse JSON from request
-  //     .then((resultData) => {
-  //       setStarsCount(resultData);
-  //       console.log(resultData);
-  //     });
-  // }, [])
-  // fetch("/.netlify/functions/hello")
-  //  .then(response => response.json())
-  //  .then(console.log)
-
   return (
     <div>
-      <section className='section has-image has-text-light'></section>
       <section
-        className='section has-text-light is-slanted--right has-background-black-bis'
+        className='section is-slanted--right has-text-light has-background-primary'
         style={{ paddingBlockEnd: "8rem" }}>
         <div className='container'>
           <h1 className='is-size-1 pt-6'>{title}</h1>
           <FlipText />
-          <h2 className="is-size-4 pb-5">
+          <h2 className='is-size-4 pb-5'>
             We are always looking for new talented players to join our team
           </h2>
           <p>
-            <Link to='/contact' className='button is-primary'>
+            <Link to='/contact' className='button is-medium'>
               Join us now
             </Link>
           </p>
@@ -59,7 +44,10 @@ const IndexPage = ({ data }) => {
 
   return (
     <Layout>
-      <IndexPageTemplate title={frontmatter.title} teams={frontmatter.teams} />
+      <IndexPageTemplate
+        title={frontmatter.title}
+        teams={frontmatter.teams}
+      />
     </Layout>
   );
 };
