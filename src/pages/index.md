@@ -2,67 +2,60 @@
 templateKey: index-page
 title: Sher Force Football Club
 teams:
-  - name: Essex Minors (Hornchurch) (S) First
-    played: 8
-    won: 7
-    drawn: 0
-    lost: 1
-    gd: 23
-    points: 21
-  - name: Horse & Well (S) First
-    played: 6
-    won: 4
-    drawn: 1
-    lost: 1
-    gd: 3
-    points: 13
   - name: Something from Nothing (S) First
-    played: 4
-    won: 3
+    played: 10
+    won: 9
     drawn: 1
     lost: 0
-    gd: 13
-    points: 10
-  - name: Cardinals Athletic (S) First
-    played: 8
-    won: 3
+    gd: 28
+    points: 28
+  - name: Essex Minors (Hornchurch) (S) First
+    played: 12
+    won: 7
     drawn: 1
     lost: 4
-    gd: 2
-    points: 10
-  - name: Belfry  Sunday Reserves
-    played: 6
-    won: 3
-    drawn: 1
-    lost: 2
-    gd: 0
-    points: 10
-  - name: Hainault Athletic (S) First
-    played: 7
-    won: 2
+    gd: 13
+    points: 22
+  - name: Horse & Well (S) First
+    played: 10
+    won: 6
     drawn: 2
-    lost: 3
-    gd: -1
-    points: 8
-  - name: Beckton Gas (S) First
-    played: 5
-    won: 2
-    drawn: 0
-    lost: 3
-    gd: -7
-    points: 6
-  - name: Sher Force (S) First
-    played: 6
-    won: 1
-    drawn: 0
+    lost: 2
+    gd: 4
+    points: 20
+  - name: Belfry  Sunday Reserves
+    played: 12
+    won: 6
+    drawn: 1
     lost: 5
-    gd: -16
-    points: 3
-  - name: Barking Colts (S) First
-    played: 6
-    won: 0
-    drawn: 0
+    gd: 5
+    points: 19
+  - name: Cardinals Athletic (S) First
+    played: 11
+    won: 4
+    drawn: 1
     lost: 6
-    gd: -17
-    points: 0
+    gd: -7
+    points: 13
+  - name: Hainault Athletic (S) First
+    played: 11
+    won: 3
+    drawn: 3
+    lost: 5
+    gd: -2
+    points: 12
+  - name: Sher Force (S) First
+    played: 9
+    won: 1
+    drawn: 2
+    lost: 6
+    gd: -20
+    points: 5
+  - name: Barking Colts (S) First
+    played: 11
+    won: 1
+    drawn: 1
+    lost: 9
+    gd: -21
+    points: 4
 ---
