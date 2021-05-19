@@ -14,7 +14,7 @@ const Table = ({ teams }) => {
           />
         </a>
         <a
-          href='https://fulltime-league.thefa.com/ProcessPublicSelect.do?psSelectedSeason=997972047&psSelectedDivision=193785606&psSelectedCompetition=0&psSelectedLeague=2113065'
+          href='https://fulltime-league.thefa.com/index.html?selectedSeason=997972047&selectedFixtureGroupAgeGroup=0&selectedDivision=193785606&selectedCompetition=0'
           className='table__title--text'>
           Division Two
         </a>
